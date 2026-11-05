@@ -1,0 +1,470 @@
+.viewport-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #254085 0%, #0e1938 100%);
+}
+
+.viewport-wrapper.theme-saveduit {
+  background: radial-gradient(circle at center, #252525 0%, #0a0a0a 100%);
+}
+
+/* Exact 1080x1920 Figma Frame */
+.kiosk-stage {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  background-color: #ffffff;
+  overflow: hidden;
+  flex-shrink: 0;
+  transform-origin: center center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* Shared Display Font matching Figma font-['Hanson:Bold'] */
+.font-hanson {
+  font-family: 'Hanson Bold', 'Hanson', 'Unbounded', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Shared Regular Font matching Figma font-['Open_Sauce_One:Regular'] */
+.font-open-sauce {
+  font-family: 'Open Sauce One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+/* Common Background & Header Layers */
+.layer-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1080px;
+  height: 1920px;
+}
+
+.layer-title {
+  position: absolute;
+  left: 50%;
+  top: -74px;
+  width: 890px;
+  height: 860px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.layer-logo {
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: 98px;
+  width: 305px;
+  height: 149px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.img-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* START SCREEN: BIB Input Group (14:122) */
+.start-bib-card {
+  position: absolute;
+  left: 50%;
+  top: 658px;
+  width: 634px;
+  height: 249px;
+  transform: translateX(-50%);
+  background-color: #c42026;
+  border-radius: 24px;
+}
+
+.start-bib-label {
+  position: absolute;
+  left: 50%;
+  top: 684px;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.start-bib-input-box {
+  position: absolute;
+  left: 50%;
+  top: 743px;
+  width: 600px;
+  height: 149px;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-bib-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: center;
+  font-family: 'Hanson Bold', 'Hanson', 'Unbounded', sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  color: #1e1e1e;
+  padding: 0 24px;
+  border-radius: 24px;
+}
+
+.start-bib-input:placeholder-shown {
+  font-family: 'Open Sauce One', sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  color: #a5a4a4;
+}
+
+.start-bib-input::placeholder {
+  font-family: 'Open Sauce One', sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  color: #a5a4a4;
+  opacity: 1;
+}
+
+/* START SCREEN: MULAI Button (14:32) */
+.btn-mulai {
+  position: absolute;
+  left: 50%;
+  top: 939px;
+  width: 652px;
+  height: 117px;
+  transform: translateX(-50%);
+  background-color: #f8a619;
+  border-radius: 37px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.btn-mulai:hover {
+  filter: brightness(1.04);
+}
+
+.btn-mulai:active {
+  transform: translateX(-50%) scale(0.98);
+}
+
+.btn-mulai-text {
+  color: #3555a4;
+  font-size: 57px;
+  white-space: nowrap;
+}
+
+/* SPIN WHEEL SCREEN (14:36) */
+.wheel-container {
+  position: absolute;
+  left: 51.25%;
+  top: 450px;
+  width: 948px;
+  height: 916px;
+  transform: translateX(-50%) scale(0.95);
+  pointer-events: none;
+}
+
+.wheel-rotor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.wheel-pointer {
+  position: absolute;
+  left: 857px;
+  top: 775px;
+  width: 137px;
+  height: 133px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.btn-spin-center {
+  position: absolute;
+  left: 428px;
+  top: 783px;
+  width: 200px;
+  height: 200px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease;
+  transform: scale(1.01);
+}
+
+.btn-spin-center:hover:not(:disabled) {
+  transform: scale(1.03);
+}
+
+.btn-spin-center:disabled {
+  cursor: default;
+}
+
+.btn-spin-circle-svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.btn-spin-logo {
+  position: absolute;
+  left: 22px;
+  top: 61px;
+  width: 191px;
+  height: 93px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* RESULT MODAL OVERLAY (14:50 HADIAH & 156:12 ZONK) */
+.result-overlay-backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1080px;
+  height: 1920px;
+  background-color: rgba(30, 30, 30, 0.66);
+  z-index: 10;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.celebration-group-xtrarun,
+.celebration-group-saveduit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 11;
+}
+
+.motif-red-1 {
+  position: absolute;
+  left: 128px;
+  top: 397.89px;
+  width: 195.902px;
+  height: 189.514px;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.motif-red-2 {
+  position: absolute;
+  left: 755.1px;
+  top: 466.03px;
+  width: 195.902px;
+  height: 189.514px;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.motif-yellow-1 {
+  position: absolute;
+  left: 301.54px;
+  top: 301px;
+  width: 491.884px;
+  height: 474.849px;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.motif-yellow-2 {
+  position: absolute;
+  left: 684.83px;
+  top: 373.4px;
+  width: 129.891px;
+  height: 125.633px;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.motif-yellow-3 {
+  position: absolute;
+  left: 285.57px;
+  top: 558.65px;
+  width: 129.891px;
+  height: 125.633px;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.result-heading-hadiah {
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 488.42px;
+  width: 691px;
+  height: 99px;
+  transform: translateX(-50%);
+  color: #f8a619;
+  font-size: 95px;
+  text-align: center;
+  z-index: 12;
+  -webkit-text-stroke: 16px #ffffff;
+  paint-order: stroke fill;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* SaveDuit celebration group positions (15:159 & 211:90) */
+.celebration-group-saveduit .motif-red-1 {
+  left: 116px;
+}
+
+.celebration-group-saveduit .motif-red-2 {
+  left: 743.1px;
+}
+
+.celebration-group-saveduit .motif-yellow-1 {
+  left: 289.54px;
+}
+
+.celebration-group-saveduit .motif-yellow-2 {
+  left: 672.83px;
+}
+
+.celebration-group-saveduit .motif-yellow-3 {
+  left: 273.57px;
+}
+
+.celebration-group-saveduit .result-heading-hadiah {
+  left: calc(50% - 12.5px);
+}
+
+/* Win Screen Prize Number Badge (211:43 / 211:63 NOMOR UNDIAN) */
+.nomor-undian {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.nomor-undian-circle {
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: 734px;
+  width: 337px;
+  height: 337px;
+  transform: translateX(-50%);
+}
+
+.nomor-undian-circle-svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.nomor-undian-text {
+  position: absolute;
+  left: 544.5px;
+  top: 780px;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 250px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 13;
+}
+
+/* Zonk Screen Center Heading (156:27 / 211:74) */
+.result-heading-zonk {
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: 832px;
+  width: 691px;
+  height: 99px;
+  transform: translateX(-50%);
+  color: #c42026;
+  font-size: 171px;
+  text-align: center;
+  z-index: 12;
+  -webkit-text-stroke: 16px #ffffff;
+  paint-order: stroke fill;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.btn-klaim {
+  position: absolute;
+  left: 50%;
+  top: 1193px;
+  width: 652px;
+  height: 117px;
+  transform: translateX(-50%);
+  background-color: #f8a619;
+  border-radius: 37px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  z-index: 13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.btn-klaim:hover {
+  filter: brightness(1.04);
+}
+
+.btn-klaim:active {
+  transform: translateX(-50%) scale(0.98);
+}
+
+.btn-klaim-text {
+  color: #3555a4;
+  font-size: 57px;
+  white-space: nowrap;
+}
