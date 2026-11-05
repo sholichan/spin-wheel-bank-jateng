@@ -1,5 +1,6 @@
 import { type FormEvent, useEffect, useRef, useState } from 'react'
 import './App.css'
+import pesertaData from './data/peserta.json'
 
 import xtrarunBg from './assets/xtrarun-bg.png'
 import saveduitBg from './assets/saveduit-bg.png'
@@ -25,11 +26,32 @@ interface WheelSegment {
   isWin: boolean
 }
 
+interface Peserta {
+  NO: number
+  BIB: number
+  NAMA: string
+  KATEGORI: string
+}
+
 interface InitialParams {
   screen: ScreenMode
   theme: ThemeMode
-  bib: string
+  bib: number
   prize: string
+}
+
+const PESERTA_LIST: Peserta[] = pesertaData
+
+function findPesertaByBib(bibInput: number | string): Peserta | undefined {
+  const cleaned = String(bibInput ?? '').replace(/\D/g, '')
+  if (!cleaned) return undefined
+  const numericBib = Number(cleaned)
+  if (!numericBib || Number.isNaN(numericBib)) return undefined
+  return PESERTA_LIST.find((p) => Number(p.BIB) === numericBib)
+}
+
+function getThemeFromKategori(kategori: string): ThemeMode {
+  return kategori.trim().toUpperCase() === 'XTRARUN' ? 'xtrarun' : 'saveduit'
 }
 
 // 12 segments clockwise starting from 12 o'clock (each segment = 30deg).
@@ -60,7 +82,7 @@ function isValidScreen(value: string | null): value is ScreenMode {
 
 function getInitialParams(): InitialParams {
   if (typeof window === 'undefined') {
-    return { screen: 'start', theme: 'saveduit', bib: '', prize: '1' }
+    return { screen: 'start', theme: 'saveduit', bib: 0, prize: '1' }
   }
 
   const params = new URLSearchParams(window.location.search)
@@ -70,13 +92,19 @@ function getInitialParams(): InitialParams {
   const prizeParam = params.get('prize')
 
   const screen: ScreenMode = isValidScreen(screenParam) ? screenParam : 'start'
-  const theme: ThemeMode = themeParam === 'xtrarun' ? 'xtrarun' : 'saveduit'
-  const bib =
-    bibParam !== null
-      ? bibParam
-      : screen === 'win' || screen === 'zonk'
-        ? '1090'
-        : ''
+  const parsedBib = bibParam !== null ? parseInt(bibParam, 10) : NaN
+  const bib: number = !Number.isNaN(parsedBib)
+    ? parsedBib
+    : screen === 'win' || screen === 'zonk'
+      ? (PESERTA_LIST[0]?.BIB ?? 10128)
+      : 0
+  const matchedPeserta = findPesertaByBib(bib)
+  const theme: ThemeMode =
+    screen !== 'start' && matchedPeserta
+      ? getThemeFromKategori(matchedPeserta.KATEGORI)
+      : themeParam === 'xtrarun'
+        ? 'xtrarun'
+        : 'saveduit'
   const prize =
     prizeParam && ['1', '2', '3', '4', '5'].includes(prizeParam)
       ? prizeParam
@@ -88,8 +116,9 @@ function getInitialParams(): InitialParams {
 export default function App() {
   const initial = getInitialParams()
   const [screen, setScreen] = useState<ScreenMode>(initial.screen)
-  const [theme] = useState<ThemeMode>(initial.theme)
-  const [bibNumber, setBibNumber] = useState<string>(initial.bib)
+  const [theme, setTheme] = useState<ThemeMode>(initial.theme)
+  const [bibNumber, setBibNumber] = useState<number>(initial.bib)
+  const [warningMessage, setWarningMessage] = useState<string | null>(null)
   const [prizeNumber, setPrizeNumber] = useState<string>(initial.prize)
   const [rotation, setRotation] = useState<number>(0)
   const [isSpinning, setIsSpinning] = useState<boolean>(false)
@@ -117,11 +146,30 @@ export default function App() {
     }
   }, [])
 
+  const handleBibChange = (nextBib: number) => {
+    const validBib = Number.isNaN(nextBib) ? 0 : nextBib
+    setBibNumber(validBib)
+  }
+
   const handleStart = (e?: FormEvent<HTMLFormElement>) => {
     if (e) e.preventDefault()
-    if (!bibNumber.trim()) {
-      setBibNumber('1090')
+    const currentBib = Number(String(bibNumber ?? '').replace(/\D/g, ''))
+    if (!currentBib) {
+      setWarningMessage('Harap masukkan nomor BIB terlebih dahulu!')
+      return
     }
+
+    const peserta = findPesertaByBib(currentBib)
+    if (!peserta) {
+      setWarningMessage(
+        `Nomor BIB "${currentBib}" tidak terdaftar dalam data peserta.`,
+      )
+      return
+    }
+
+    setBibNumber(currentBib)
+    setTheme(getThemeFromKategori(peserta.KATEGORI))
+    setWarningMessage(null)
     setScreen('wheel')
   }
 
@@ -154,7 +202,7 @@ export default function App() {
 
   const handleClaim = () => {
     setIsSpinning(false)
-    setBibNumber('')
+    setBibNumber(0)
     setScreen('start')
   }
 
@@ -232,9 +280,10 @@ export default function App() {
                   inputMode="numeric"
                   className="start-bib-input"
                   placeholder="Masukkan nomor BIB"
-                  value={bibNumber}
+                  value={bibNumber ? String(bibNumber) : ''}
                   onChange={(e) => {
-                    setBibNumber(e.target.value)
+                    const digits = e.target.value.replace(/\D/g, '')
+                    handleBibChange(digits ? Number(digits) : 0)
                   }}
                   aria-label="Nomor BIB"
                   data-node-id="14:31"
@@ -255,6 +304,48 @@ export default function App() {
               </span>
             </button>
           </form>
+        )}
+
+        {/* WARNING POPUP MODAL */}
+        {warningMessage && (
+          <div
+            className="warning-modal-backdrop"
+            role="alertdialog"
+            aria-modal="true"
+            aria-labelledby="warning-modal-title"
+            aria-describedby="warning-modal-desc"
+            onClick={() => setWarningMessage(null)}
+          >
+            <div
+              className="warning-modal-card"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="warning-modal-icon" aria-hidden="true">
+                !
+              </div>
+              <h2
+                id="warning-modal-title"
+                className="warning-modal-title font-hanson"
+              >
+                PERINGATAN
+              </h2>
+              <p
+                id="warning-modal-desc"
+                className="warning-modal-message font-open-sauce"
+              >
+                {warningMessage}
+              </p>
+              <button
+                type="button"
+                className="warning-modal-btn"
+                onClick={() => setWarningMessage(null)}
+              >
+                <span className="warning-modal-btn-text font-hanson">
+                  TUTUP
+                </span>
+              </button>
+            </div>
+          </div>
         )}
 
         {/* SCREEN 2, 3, 4: SPIN WHEEL & RESULT OVERLAYS (14:36, 14:50, 156:12) */}
