@@ -1,18 +1,21 @@
-.viewport-wrapper {
-  width: 100vw;
-  height: 100vh;
+.spinwheel-layout {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  user-select: none;
   background: radial-gradient(circle at center, #254085 0%, #0e1938 100%);
 }
 
-.viewport-wrapper.theme-saveduit {
+.spinwheel-layout.theme-saveduit {
   background: radial-gradient(circle at center, #252525 0%, #0a0a0a 100%);
 }
 
-/* Exact 1080x1920 Figma Frame */
+/* Exact 1080x1920 Figma Frame (Portrait) */
 .kiosk-stage {
   position: relative;
   width: 1080px;
