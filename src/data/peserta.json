@@ -1,129 +1,1490 @@
 [
   {
-    "NO": 1,
-    "BIB": 10128,
-    "NAMA": "Rendy Ismara Saroso",
-    "KATEGORI": "SAVEDUIT"
+    "no": 1,
+    "bib": "31773",
+    "nama": "virky agusta",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 2,
-    "BIB": 10129,
-    "NAMA": "AGUS DWI LESTARI",
-    "KATEGORI": "SAVEDUIT"
+    "no": 2,
+    "bib": "23171",
+    "nama": "Tisar Ibnu Mansyar",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 3,
-    "BIB": 10130,
-    "NAMA": "Ronny Fajar Hidayat",
-    "KATEGORI": "SAVEDUIT"
+    "no": 3,
+    "bib": "31774",
+    "nama": "kedah sedewa",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 4,
-    "BIB": 10131,
-    "NAMA": "Fidllan Nurkhoir",
-    "KATEGORI": "SAVEDUIT"
+    "no": 4,
+    "bib": "31775",
+    "nama": "NADYA RISMA PRATIWI",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 5,
-    "BIB": 10132,
-    "NAMA": "DAVID INDRA SALIM",
-    "KATEGORI": "SAVEDUIT"
+    "no": 5,
+    "bib": "31776",
+    "nama": "deni wahyu hermawan",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 6,
-    "BIB": 10133,
-    "NAMA": "aries widyono",
-    "KATEGORI": "SAVEDUIT"
+    "no": 6,
+    "bib": "14161",
+    "nama": "Mangihut Bernard Sinaga",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 7,
-    "BIB": 10134,
-    "NAMA": "Sugeng Sh",
-    "KATEGORI": "SAVEDUIT"
+    "no": 7,
+    "bib": "31777",
+    "nama": "Abdullah Abid",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 8,
-    "BIB": 10135,
-    "NAMA": "Benni Irsan",
-    "KATEGORI": "SAVEDUIT"
+    "no": 8,
+    "bib": "31778",
+    "nama": "Mohamad Abiyyu Putra",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 9,
-    "BIB": 10136,
-    "NAMA": "Daniel Rudy Christian",
-    "KATEGORI": "SAVEDUIT"
+    "no": 9,
+    "bib": "31779",
+    "nama": "Ira Febriati Karo Karo",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 10,
-    "BIB": 10137,
-    "NAMA": "Shalahuddin Shantika Putra",
-    "KATEGORI": "SAVEDUIT"
+    "no": 10,
+    "bib": "31781",
+    "nama": "Rr Listiana Dewi Sartika",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 11,
-    "BIB": 10138,
-    "NAMA": "Henry Hartono",
-    "KATEGORI": "XTRARUN"
+    "no": 11,
+    "bib": "31782",
+    "nama": "Wimmas Pramesti Pungkasari",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 12,
-    "BIB": 10139,
-    "NAMA": "Rohmat Adi Nugroho",
-    "KATEGORI": "XTRARUN"
+    "no": 12,
+    "bib": "23182",
+    "nama": "Reza Rachman",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 13,
-    "BIB": 10140,
-    "NAMA": "Alies Ellen",
-    "KATEGORI": "XTRARUN"
+    "no": 13,
+    "bib": "23183",
+    "nama": "Nur Syahriawati (Ria)",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 14,
-    "BIB": 10141,
-    "NAMA": "Kwan Yudy Efendy Kartono",
-    "KATEGORI": "XTRARUN"
+    "no": 14,
+    "bib": "23184",
+    "nama": "Guirin Nugroho",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 15,
-    "BIB": 10142,
-    "NAMA": "Hendro Susanto",
-    "KATEGORI": "XTRARUN"
+    "no": 15,
+    "bib": "23185",
+    "nama": "endah istiqomah",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 16,
-    "BIB": 10143,
-    "NAMA": "Andrian Wahyudi ",
-    "KATEGORI": "XTRARUN"
+    "no": 16,
+    "bib": "23186",
+    "nama": "riadi simka pinem",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 17,
-    "BIB": 10144,
-    "NAMA": "Abram Perdanaputra",
-    "KATEGORI": "XTRARUN"
+    "no": 17,
+    "bib": "23195",
+    "nama": "Wahyu Fitri Adi",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 18,
-    "BIB": 10145,
-    "NAMA": "Werry Yulianto",
-    "KATEGORI": "XTRARUN"
+    "no": 18,
+    "bib": "31797",
+    "nama": "Rinzana Afrah Rohan",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 19,
-    "BIB": 10146,
-    "NAMA": "Andrew Arnadi Hartanoeh",
-    "KATEGORI": "XTRARUN"
+    "no": 19,
+    "bib": "23199",
+    "nama": "Yuliawaty",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 20,
-    "BIB": 10147,
-    "NAMA": "Bagus Rindra Adi Wijaya",
-    "KATEGORI": "XTRARUN"
+    "no": 20,
+    "bib": "23200",
+    "nama": "Dewi Setiati Utami",
+    "kategori": "XTRARUN"
   },
   {
-    "NO": 21,
-    "BIB": 10148,
-    "NAMA": "Jefry Budiman",
-    "KATEGORI": "XTRARUN"
+    "no": 21,
+    "bib": "31802",
+    "nama": "kristina",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 22,
+    "bib": "23204",
+    "nama": "Margareta Susi Widiastuti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 23,
+    "bib": "23205",
+    "nama": "Akbar Noviarie Santang",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 24,
+    "bib": "31804",
+    "nama": "Agung Hartanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 25,
+    "bib": "31811",
+    "nama": "San Oktavia Hari Akbar",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 26,
+    "bib": "23222",
+    "nama": "Beni Bandanajaya",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 27,
+    "bib": "31828",
+    "nama": "Maria Syrilla Tasha",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 28,
+    "bib": "14172",
+    "nama": "geronimo kenzo grena prasetya",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 29,
+    "bib": "23245",
+    "nama": "Purwanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 30,
+    "bib": "23248",
+    "nama": "Yunidhar Alfian Pratama Indra Saputra",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 31,
+    "bib": "31844",
+    "nama": "NUGROHO ARIS KUSUMA",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 32,
+    "bib": "31848",
+    "nama": "ADNAN AZARIA",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 33,
+    "bib": "31849",
+    "nama": "Iwan Hermawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 34,
+    "bib": "31850",
+    "nama": "Raffky Tandria Pradhana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 35,
+    "bib": "31854",
+    "nama": "Albertus Wicaksono",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 36,
+    "bib": "31855",
+    "nama": "Vania Amelinda",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 37,
+    "bib": "31856",
+    "nama": "zakiyah deena anggraeni",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 38,
+    "bib": "23253",
+    "nama": "Antonius Albert Agung Hadiwono",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 39,
+    "bib": "31857",
+    "nama": "siwi bagus ajiningrat",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 40,
+    "bib": "23254",
+    "nama": "farand Syafi Wibowo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 41,
+    "bib": "23255",
+    "nama": "Endi setia pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 42,
+    "bib": "23256",
+    "nama": "Jali Sulaiman",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 43,
+    "bib": "31858",
+    "nama": "azhar asnan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 44,
+    "bib": "31859",
+    "nama": "Anjar Kristanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 45,
+    "bib": "31860",
+    "nama": "Budi rahayu dwi wijayani",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 46,
+    "bib": "31861",
+    "nama": "Naufal Dzaki Nastikawa Putra",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 47,
+    "bib": "31862",
+    "nama": "Alfriady Zuliansyah",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 48,
+    "bib": "31863",
+    "nama": "Khofifah Amalia Argina",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 49,
+    "bib": "23257",
+    "nama": "Heru Budi Utomo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 50,
+    "bib": "31864",
+    "nama": "Yonathan Supriadi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 51,
+    "bib": "31865",
+    "nama": "SYAMSI ATROIS AZIZ",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 52,
+    "bib": "23258",
+    "nama": "Petrick Ariska Pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 53,
+    "bib": "23259",
+    "nama": "donjuan rumahorbo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 54,
+    "bib": "14175",
+    "nama": "Hartini",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 55,
+    "bib": "31866",
+    "nama": "Inez Dwita Aryani Setiawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 56,
+    "bib": "31867",
+    "nama": "A Andy Permana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 57,
+    "bib": "23260",
+    "nama": "Muhammad Rifki Ashshiddiqie",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 58,
+    "bib": "23261",
+    "nama": "Hendro Harwibawanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 59,
+    "bib": "31868",
+    "nama": "ARIF AKBAR WAHYU PINILIH",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 60,
+    "bib": "23262",
+    "nama": "Bayu Pribadi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 61,
+    "bib": "31869",
+    "nama": "Dadang Mohamad",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 62,
+    "bib": "31870",
+    "nama": "ARIEF EDY WIBOWO",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 63,
+    "bib": "31871",
+    "nama": "Elia Elvi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 64,
+    "bib": "23263",
+    "nama": "Farid Izzul Muarif",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 65,
+    "bib": "31872",
+    "nama": "Atika Rahmawati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 66,
+    "bib": "31873",
+    "nama": "Suharno",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 67,
+    "bib": "31874",
+    "nama": "Suwondo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 68,
+    "bib": "14179",
+    "nama": "Latief Raihan Rianova",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 69,
+    "bib": "31875",
+    "nama": "putri endah puspitaningtyas",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 70,
+    "bib": "14180",
+    "nama": "Andry Putra Pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 71,
+    "bib": "23264",
+    "nama": "Amri Satria Nugraha",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 72,
+    "bib": "23265",
+    "nama": "Yogia Dana Mandhala",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 73,
+    "bib": "23266",
+    "nama": "gesti yudistyawati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 74,
+    "bib": "23267",
+    "nama": "andi syahputra",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 75,
+    "bib": "23268",
+    "nama": "irfan budi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 76,
+    "bib": "31876",
+    "nama": "kristiani",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 77,
+    "bib": "31877",
+    "nama": "Doddy Prihanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 78,
+    "bib": "23270",
+    "nama": "RATNA WESTRI ERIKA",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 79,
+    "bib": "23271",
+    "nama": "Herry Nunggal Supriyadi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 80,
+    "bib": "31878",
+    "nama": "Muhammad izzal islam",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 81,
+    "bib": "31879",
+    "nama": "Kenzie Aryasatya Prayata",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 82,
+    "bib": "31880",
+    "nama": "Zuniarti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 83,
+    "bib": "14181",
+    "nama": "Achmad Sulthoni",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 84,
+    "bib": "23272",
+    "nama": "QOSIM MARZUKI",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 85,
+    "bib": "23273",
+    "nama": "Gatot Ardianto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 86,
+    "bib": "31881",
+    "nama": "yonida danan puthu wikarta",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 87,
+    "bib": "31882",
+    "nama": "Sawaluddin Syah Al Sultani",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 88,
+    "bib": "31883",
+    "nama": "FEBRIANA ENDAH SARI",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 89,
+    "bib": "31884",
+    "nama": "UMY SOLICHATUN",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 90,
+    "bib": "31885",
+    "nama": "BAMBANG AGUS PRIBADI",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 91,
+    "bib": "31886",
+    "nama": "Eldina Sakliawati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 92,
+    "bib": "31925",
+    "nama": "Wahyu Eko Febrianto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 93,
+    "bib": "31944",
+    "nama": "RYAN ARIO BAGASKARA",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 94,
+    "bib": "31952",
+    "nama": "Lahoya Romero Sampurna",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 95,
+    "bib": "14254",
+    "nama": "nurul shofri afifah",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 96,
+    "bib": "23430",
+    "nama": "syaiful anwar",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 97,
+    "bib": "31959",
+    "nama": "Ratih Setyowati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 98,
+    "bib": "23444",
+    "nama": "Oky Fajar Saputro",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 99,
+    "bib": "31967",
+    "nama": "Jihan Farah Fadhilah",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 100,
+    "bib": "31968",
+    "nama": "Aulia Nur Rakhmat Habib",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 101,
+    "bib": "14306",
+    "nama": "Rissyo Melandy RM",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 102,
+    "bib": "31978",
+    "nama": "Luqmanul hakim",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 103,
+    "bib": "31980",
+    "nama": "Amar Abdullah Dani Arni Roykhan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 104,
+    "bib": "31988",
+    "nama": "Anton Anju Napitupulu",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 105,
+    "bib": "23536",
+    "nama": "Agus Salim Kongtesa",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 106,
+    "bib": "32014",
+    "nama": "Tegar Tandika",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 107,
+    "bib": "32026",
+    "nama": "Yuni Setiyaningsih",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 108,
+    "bib": "32027",
+    "nama": "Stephen Alvin Setya Adi Pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 109,
+    "bib": "32029",
+    "nama": "Ruci Indra Sutanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 110,
+    "bib": "32034",
+    "nama": "Wida Nurfaida",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 111,
+    "bib": "23619",
+    "nama": "iwan hadi nugroho",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 112,
+    "bib": "32045",
+    "nama": "Alim Kurnia Ismawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 113,
+    "bib": "23632",
+    "nama": "Anik Indriastuti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 114,
+    "bib": "32052",
+    "nama": "pravita kusumaningtyas",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 115,
+    "bib": "23636",
+    "nama": "badawi henri",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 116,
+    "bib": "23637",
+    "nama": "Ariany",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 117,
+    "bib": "32064",
+    "nama": "Galang Nusa Aji",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 118,
+    "bib": "32065",
+    "nama": "Vera Hari Dhamayanti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 119,
+    "bib": "32072",
+    "nama": "Gilang Restu Aji",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 120,
+    "bib": "32084",
+    "nama": "KEMAL PADSHA ADHILLA BRAVE",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 121,
+    "bib": "32086",
+    "nama": "Khalisha Ayumi Tyan Brave",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 122,
+    "bib": "32089",
+    "nama": "Ajeng Talitha Saraswati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 123,
+    "bib": "23672",
+    "nama": "FAJAR NOVIAR HERMAWAN",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 124,
+    "bib": "32110",
+    "nama": "Hijrah Saputra Robianto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 125,
+    "bib": "32115",
+    "nama": "Erik Pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 126,
+    "bib": "32120",
+    "nama": "Agnes Martaulina Dwi Saraswanti Haloho",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 127,
+    "bib": "23681",
+    "nama": "nikke amrina",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 128,
+    "bib": "32134",
+    "nama": "Anas Syahirul Alim",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 129,
+    "bib": "32140",
+    "nama": "Najma Alayka Salma",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 130,
+    "bib": "32141",
+    "nama": "Dinda Awanda Ramadhani",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 131,
+    "bib": "32143",
+    "nama": "Dwi否定 / Dwi lestari",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 132,
+    "bib": "32151",
+    "nama": "Wahyu Siswanti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 133,
+    "bib": "32166",
+    "nama": "suyanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 134,
+    "bib": "32167",
+    "nama": "Riska Wahyuni",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 135,
+    "bib": "32189",
+    "nama": "Uki Atma Nagara",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 136,
+    "bib": "32191",
+    "nama": "siti muthia putri astarry",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 137,
+    "bib": "32211",
+    "nama": "hendrawan purwanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 138,
+    "bib": "32216",
+    "nama": "Emilia clara",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 139,
+    "bib": "32219",
+    "nama": "Kartika Sari",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 140,
+    "bib": "32232",
+    "nama": "iswanta",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 141,
+    "bib": "32276",
+    "nama": "EMMY KUSUMAWATI",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 142,
+    "bib": "15058",
+    "nama": "Sapari Des Prasetyo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 143,
+    "bib": "32287",
+    "nama": "Dentafirza ardana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 144,
+    "bib": "32291",
+    "nama": "andika windu adi pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 145,
+    "bib": "32292",
+    "nama": "CANDRA RISTIANA",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 146,
+    "bib": "24041",
+    "nama": "Krispina Priska Adriani",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 147,
+    "bib": "32293",
+    "nama": "dyah retno sulistyowati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 148,
+    "bib": "24043",
+    "nama": "azka febrianis",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 149,
+    "bib": "15073",
+    "nama": "Sri Suliyati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 150,
+    "bib": "32299",
+    "nama": "Ambari",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 151,
+    "bib": "24059",
+    "nama": "Dwikarti Suri Ani",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 152,
+    "bib": "24061",
+    "nama": "agus purnomo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 153,
+    "bib": "32305",
+    "nama": "Fatmawati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 154,
+    "bib": "15099",
+    "nama": "Mohamad Mujiono",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 155,
+    "bib": "32310",
+    "nama": "ARIF PRASETYA WIDODO",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 156,
+    "bib": "32312",
+    "nama": "Fia Fastabiq Nurul Iman",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 157,
+    "bib": "24079",
+    "nama": "vincensius hany wiyono",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 158,
+    "bib": "15101",
+    "nama": "Aidyl Fitrisyah",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 159,
+    "bib": "32320",
+    "nama": "Rendy Priya Utama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 160,
+    "bib": "32321",
+    "nama": "Arif Mubarok",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 161,
+    "bib": "24087",
+    "nama": "okky winang saktyawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 162,
+    "bib": "24093",
+    "nama": "Daniel Setiawan Putra Harsanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 163,
+    "bib": "15103",
+    "nama": "Septian Handoko",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 164,
+    "bib": "32339",
+    "nama": "ading priyotantoko",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 165,
+    "bib": "24106",
+    "nama": "Dian Titiaari",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 166,
+    "bib": "24109",
+    "nama": "mira dewi miriam",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 167,
+    "bib": "32344",
+    "nama": "iwan suryo susanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 168,
+    "bib": "32346",
+    "nama": "Suci Mulyanti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 169,
+    "bib": "24112",
+    "nama": "Yoppi Priatmoko",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 170,
+    "bib": "24129",
+    "nama": "Andika Rizki Lubis",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 171,
+    "bib": "32382",
+    "nama": "novel imtikhan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 172,
+    "bib": "32407",
+    "nama": "Chandra Cahyadi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 173,
+    "bib": "32408",
+    "nama": "tjung, David Gunawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 174,
+    "bib": "32455",
+    "nama": "amir Makhmud",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 175,
+    "bib": "24202",
+    "nama": "Dr. Yanna Indrayana, Sp.JP",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 176,
+    "bib": "32476",
+    "nama": "Watik Haryani",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 177,
+    "bib": "32477",
+    "nama": "Iswadi Purbintoro",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 178,
+    "bib": "15138",
+    "nama": "Ferry",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 179,
+    "bib": "24223",
+    "nama": "Inne Nova",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 180,
+    "bib": "24224",
+    "nama": "Nurul Mukhlish Bakhtiar",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 181,
+    "bib": "24226",
+    "nama": "Afrizal Galih Sudaryanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 182,
+    "bib": "32519",
+    "nama": "aninda Dessy rachmawi putri",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 183,
+    "bib": "32521",
+    "nama": "Aditya Pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 184,
+    "bib": "24235",
+    "nama": "Greget Kalla Buana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 185,
+    "bib": "32533",
+    "nama": "Gurindra Budi Prasetyo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 186,
+    "bib": "32538",
+    "nama": "muhammad rizky bintang pradana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 187,
+    "bib": "24265",
+    "nama": "Vandy Faizal Putra",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 188,
+    "bib": "32630",
+    "nama": "RIZAL BAKRI",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 189,
+    "bib": "15174",
+    "nama": "MULYADI",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 190,
+    "bib": "32650",
+    "nama": "ERIK YALIS KRIDO ASMORO",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 191,
+    "bib": "32651",
+    "nama": "imam hidayat",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 192,
+    "bib": "32667",
+    "nama": "Edwin adella",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 193,
+    "bib": "32668",
+    "nama": "Sigit Septiawan Dhuha",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 194,
+    "bib": "15183",
+    "nama": "Febni karnela",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 195,
+    "bib": "32693",
+    "nama": "Irfansyah Surya Widyapratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 196,
+    "bib": "32845",
+    "nama": "Dida herdiyana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 197,
+    "bib": "32754",
+    "nama": "aji paramanandi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 198,
+    "bib": "32755",
+    "nama": "ari setyawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 199,
+    "bib": "32886",
+    "nama": "Almaisyar",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 200,
+    "bib": "33049",
+    "nama": "Siti Muniroh",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 201,
+    "bib": "33054",
+    "nama": "zeanet ragil",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 202,
+    "bib": "33056",
+    "nama": "Sofin Hadi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 203,
+    "bib": "33058",
+    "nama": "salma maulatuz zahra",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 204,
+    "bib": "33059",
+    "nama": "Mutiaradinda Haidar",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 205,
+    "bib": "33060",
+    "nama": "Ah Robbi Ilhamil Ula",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 206,
+    "bib": "33061",
+    "nama": "NUR ISNAINI PURNOMO",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 207,
+    "bib": "33062",
+    "nama": "tri atmoko",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 208,
+    "bib": "24510",
+    "nama": "Yosua Yordan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 209,
+    "bib": "33064",
+    "nama": "NANY PUDJIANTI SUWIGJO",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 210,
+    "bib": "33065",
+    "nama": "KRISTANTI",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 211,
+    "bib": "24511",
+    "nama": "Datu agung utomo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 212,
+    "bib": "33069",
+    "nama": "Noor Krismartini",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 213,
+    "bib": "33074",
+    "nama": "Ranny Tandria",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 214,
+    "bib": "33080",
+    "nama": "caridah",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 215,
+    "bib": "33082",
+    "nama": "Laeli Nurchamidah",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 216,
+    "bib": "33084",
+    "nama": "parti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 217,
+    "bib": "33085",
+    "nama": "TOTOK KUSMINTARJO",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 218,
+    "bib": "33109",
+    "nama": "Malvin Agusto Sulistyo",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 219,
+    "bib": "33110",
+    "nama": "Dwi Budi Sulistiyana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 220,
+    "bib": "33120",
+    "nama": "asti kusumaningtyas",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 221,
+    "bib": "33121",
+    "nama": "Devi Anggria Yuliasih",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 222,
+    "bib": "33123",
+    "nama": "M Faiz Kurniawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 223,
+    "bib": "33125",
+    "nama": "Wahyu Endang Setyowati",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 224,
+    "bib": "33128",
+    "nama": "Faelasufa",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 225,
+    "bib": "33130",
+    "nama": "nanta priyana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 226,
+    "bib": "33132",
+    "nama": "MUHAMMAD TANGGUH IRHAB NIRPATAKA",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 227,
+    "bib": "33133",
+    "nama": "Syarahivarrachma Octaviasani Hadhiningrat",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 228,
+    "bib": "33135",
+    "nama": "Diyanita Fazhalina Arnaz",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 229,
+    "bib": "33144",
+    "nama": "Benedictus Rahsito Indarmasto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 230,
+    "bib": "24550",
+    "nama": "Nailah Talitha Ishaq",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 231,
+    "bib": "24551",
+    "nama": "rachel suharto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 232,
+    "bib": "33149",
+    "nama": "Albert Pratama",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 233,
+    "bib": "33150",
+    "nama": "sidharta",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 234,
+    "bib": "33152",
+    "nama": "Yenny Nurisa",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 235,
+    "bib": "33155",
+    "nama": "renny rantika",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 236,
+    "bib": "24555",
+    "nama": "Ahmad Mudzakkir Ami",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 237,
+    "bib": "33157",
+    "nama": "TM Fuad Hassan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 238,
+    "bib": "33158",
+    "nama": "yonathan sebastian liyanto",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 239,
+    "bib": "33160",
+    "nama": "Dairoh",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 240,
+    "bib": "33162",
+    "nama": "Fitri Amaliyah",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 241,
+    "bib": "33163",
+    "nama": "Muhammad Herdhana Ash Shidiqi",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 242,
+    "bib": "33164",
+    "nama": "eko pujiastuti",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 243,
+    "bib": "33175",
+    "nama": "Anggit Auliya",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 244,
+    "bib": "33177",
+    "nama": "Qonitya Hapsari",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 245,
+    "bib": "33179",
+    "nama": "alena alberta",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 246,
+    "bib": "33180",
+    "nama": "Frenki Ariyawan",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 247,
+    "bib": "33181",
+    "nama": "Agus RinRin Iriana",
+    "kategori": "XTRARUN"
+  },
+  {
+    "no": 248,
+    "bib": "33186",
+    "nama": "Irene Hidayat",
+    "kategori": "XTRARUN"
   }
 ]
-
