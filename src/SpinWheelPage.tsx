@@ -1,4 +1,4 @@
-import { type FormEvent, useEffect, useRef, useState } from 'react'
+import { type FormEvent, type ReactNode, useEffect, useRef, useState } from 'react'
 import './App.css'
 import SpinWheelLayout from './layouts/SpinWheelLayout'
 import {
@@ -6,6 +6,7 @@ import {
   fetchSpinHistory,
   findPesertaByBib,
   loadSpinHistory,
+  type Peserta,
   PESERTA_LIST,
 } from './spinHistory'
 
@@ -108,7 +109,8 @@ export default function SpinWheelPage() {
   const [screen, setScreen] = useState<ScreenMode>(initial.screen)
   const [theme, setTheme] = useState<ThemeMode>(initial.theme)
   const [bibNumber, setBibNumber] = useState<number>(initial.bib)
-  const [warningMessage, setWarningMessage] = useState<string | null>(null)
+  const [warningMessage, setWarningMessage] = useState<ReactNode>(null)
+  const [welcomePeserta, setWelcomePeserta] = useState<Peserta | null>(null)
   const [prizeNumber, setPrizeNumber] = useState<string>(initial.prize)
   const [rotation, setRotation] = useState<number>(0)
   const [isSpinning, setIsSpinning] = useState<boolean>(false)
@@ -157,7 +159,10 @@ export default function SpinWheelPage() {
     const peserta = findPesertaByBib(currentBib)
     if (!peserta) {
       setWarningMessage(
-        `Nomor BIB "${currentBib}" tidak terdaftar dalam data peserta.`,
+        <>
+          Nomor BIB <strong>"{currentBib}"</strong> tidak terdaftar dalam data
+          peserta.
+        </>,
       )
       return
     }
@@ -166,7 +171,13 @@ export default function SpinWheelPage() {
     const hasPlayed = history.some((item) => Number(item.bib) === currentBib)
     if (hasPlayed) {
       setWarningMessage(
-        `Nomor BIB "${currentBib}" (${peserta.NAMA}) sudah pernah bermain dan tidak bisa bermain lagi!`,
+        <>
+          Nomor BIB{' '}
+          <strong>
+            "{currentBib}" ({peserta.NAMA})
+          </strong>{' '}
+          sudah pernah bermain dan tidak bisa bermain lagi!
+        </>,
       )
       return
     }
@@ -174,6 +185,11 @@ export default function SpinWheelPage() {
     setBibNumber(currentBib)
     setTheme(getThemeFromKategori(peserta.KATEGORI))
     setWarningMessage(null)
+    setWelcomePeserta(peserta)
+  }
+
+  const handleContinueWelcome = () => {
+    setWelcomePeserta(null)
     setScreen('wheel')
   }
 
@@ -185,7 +201,10 @@ export default function SpinWheelPage() {
     )
     if (hasPlayed) {
       setWarningMessage(
-        `Nomor BIB "${bibNumber}" sudah pernah bermain dan tidak bisa bermain lagi!`,
+        <>
+          Nomor BIB <strong>"{bibNumber}"</strong> sudah pernah bermain dan
+          tidak bisa bermain lagi!
+        </>,
       )
       setScreen('start')
       return
@@ -354,7 +373,7 @@ export default function SpinWheelPage() {
                 id="warning-modal-title"
                 className="warning-modal-title font-hanson"
               >
-                PERINGATAN
+                Maaf
               </h2>
               <p
                 id="warning-modal-desc"
@@ -369,6 +388,51 @@ export default function SpinWheelPage() {
               >
                 <span className="warning-modal-btn-text font-hanson">
                   TUTUP
+                </span>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* WELCOME POPUP MODAL */}
+        {welcomePeserta && (
+          <div
+            className="warning-modal-backdrop"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="welcome-modal-title"
+            aria-describedby="welcome-modal-desc"
+          >
+            <div
+              className="warning-modal-card welcome-modal-card"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div
+                className="warning-modal-icon welcome-modal-icon"
+                aria-hidden="true"
+              >
+                ✓
+              </div>
+              <h2
+                id="welcome-modal-title"
+                className="warning-modal-title welcome-modal-title font-hanson"
+              >
+                Selamat Datang
+              </h2>
+              <p
+                id="welcome-modal-desc"
+                className="warning-modal-message font-open-sauce"
+              >
+                Hallo <strong>{welcomePeserta.NAMA}</strong> dengan nomor{' '}
+                <strong>{welcomePeserta.BIB}</strong>.
+              </p>
+              <button
+                type="button"
+                className="warning-modal-btn welcome-modal-btn"
+                onClick={handleContinueWelcome}
+              >
+                <span className="warning-modal-btn-text welcome-modal-btn-text font-hanson">
+                  Lanjutkan
                 </span>
               </button>
             </div>

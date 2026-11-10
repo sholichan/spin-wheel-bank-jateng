@@ -1,5 +1,41 @@
 [
   {
+    "id": "1794283976687-9o3nxf",
+    "bib": 10136,
+    "nama": "Daniel Rudy Christian",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-10T04:12:56.687Z"
+  },
+  {
+    "id": "1794283944302-kw35pv",
+    "bib": 10137,
+    "nama": "Shalahuddin Shantika Putra",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-10T04:12:24.302Z"
+  },
+  {
+    "id": "1794283608190-ohbxx2",
+    "bib": 10138,
+    "nama": "Henry Hartono",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-10T04:06:48.190Z"
+  },
+  {
+    "id": "1794283101539-vi1okb",
+    "bib": 10139,
+    "nama": "Rohmat Adi Nugroho",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-10T03:58:21.539Z"
+  },
+  {
     "id": "1793948372670-o2wzi4",
     "bib": 10132,
     "nama": "DAVID INDRA SALIM",

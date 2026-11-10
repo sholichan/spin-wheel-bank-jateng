@@ -266,7 +266,7 @@
   height: 1920px;
   background-color: rgba(30, 30, 30, 0.66);
   z-index: 10;
-  animation: fadeIn 0.25s ease-out;
+  animation: fadeIn 0.3s ease-out both;
 }
 
 @keyframes fadeIn {
@@ -276,6 +276,94 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes motifBurst {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-12deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.08) rotate(3deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes headingPopDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-40px) scale(0.7);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(6px) scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes prizeZoomBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zonkShakeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(calc(-50% - 14px)) scale(1.08) rotate(-3deg);
+  }
+
+  70% {
+    transform: translateX(calc(-50% + 12px)) scale(1.04) rotate(3deg);
+  }
+
+  85% {
+    transform: translateX(calc(-50% - 6px)) scale(1.01) rotate(-1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes klaimSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(48px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
   }
 }
 
@@ -295,6 +383,7 @@
   height: 189.514px;
   z-index: 11;
   pointer-events: none;
+  animation: motifBurst 0.55s cubic-bezier(0.2, 0.9, 0.3, 1) 0.1s both;
 }
 
 .motif-red-2 {
@@ -305,6 +394,7 @@
   height: 189.514px;
   z-index: 11;
   pointer-events: none;
+  animation: motifBurst 0.55s cubic-bezier(0.2, 0.9, 0.3, 1) 0.14s both;
 }
 
 .motif-yellow-1 {
@@ -315,6 +405,7 @@
   height: 474.849px;
   z-index: 11;
   pointer-events: none;
+  animation: motifBurst 0.55s cubic-bezier(0.2, 0.9, 0.3, 1) 0.05s both;
 }
 
 .motif-yellow-2 {
@@ -325,6 +416,7 @@
   height: 125.633px;
   z-index: 11;
   pointer-events: none;
+  animation: motifBurst 0.55s cubic-bezier(0.2, 0.9, 0.3, 1) 0.18s both;
 }
 
 .motif-yellow-3 {
@@ -335,6 +427,7 @@
   height: 125.633px;
   z-index: 11;
   pointer-events: none;
+  animation: motifBurst 0.55s cubic-bezier(0.2, 0.9, 0.3, 1) 0.22s both;
 }
 
 .result-heading-hadiah {
@@ -355,6 +448,7 @@
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  animation: headingPopDown 0.5s cubic-bezier(0.2, 0.9, 0.3, 1) 0.05s both;
 }
 
 /* SaveDuit celebration group positions (15:159 & 211:90) */
@@ -388,6 +482,8 @@
   inset: 0;
   pointer-events: none;
   z-index: 12;
+  transform-origin: 540px 902px;
+  animation: prizeZoomBounce 0.55s cubic-bezier(0.18, 1.25, 0.4, 1) 0.12s both;
 }
 
 .nomor-undian-circle {
@@ -437,6 +533,7 @@
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  animation: zonkShakeIn 0.55s cubic-bezier(0.2, 0.9, 0.3, 1) 0.12s both;
 }
 
 .btn-klaim {
@@ -456,6 +553,7 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.12s ease, filter 0.12s ease;
+  animation: klaimSlideUp 0.45s cubic-bezier(0.2, 0.9, 0.3, 1) 0.25s both;
 }
 
 .btn-klaim:hover {
@@ -569,4 +667,26 @@
   color: #3555a4;
   font-size: 46px;
   white-space: nowrap;
+}
+
+/* WELCOME POPUP MODAL (GREEN) */
+.welcome-modal-card {
+  border-color: #16a34a;
+}
+
+.welcome-modal-icon {
+  background-color: #16a34a;
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.35);
+}
+
+.welcome-modal-title {
+  color: #16a34a;
+}
+
+.welcome-modal-btn {
+  background-color: #16a34a;
+}
+
+.welcome-modal-btn-text {
+  color: #ffffff;
 }

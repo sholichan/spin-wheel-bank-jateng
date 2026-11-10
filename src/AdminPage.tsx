@@ -55,6 +55,16 @@ export default function AdminPage() {
 
   useEffect(() => {
     document.title = 'Admin - Spin History Bank Jateng'
+
+    const logPageDimensions = () => {
+      console.log(
+        `[AdminPage] Viewport: ${window.innerWidth}px x ${window.innerHeight}px | Page (scroll): ${document.documentElement.scrollWidth}px x ${document.documentElement.scrollHeight}px`,
+      )
+    }
+
+    logPageDimensions()
+    window.addEventListener('resize', logPageDimensions)
+    return () => window.removeEventListener('resize', logPageDimensions)
   }, [])
 
   // Verify existing session token on mount
