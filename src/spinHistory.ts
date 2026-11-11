@@ -1,10 +1,10 @@
 import pesertaData from './data/peserta.json'
 
 export interface Peserta {
-  NO: number
-  BIB: number
-  NAMA: string
-  KATEGORI: string
+  no: number
+  bib: number | string
+  nama: string
+  kategori: string
 }
 
 export interface SpinHistoryItem {
@@ -29,7 +29,7 @@ export function findPesertaByBib(bibInput: number | string): Peserta | undefined
   if (!cleaned) return undefined
   const numericBib = Number(cleaned)
   if (!numericBib || Number.isNaN(numericBib)) return undefined
-  return PESERTA_LIST.find((p) => Number(p.BIB) === numericBib)
+  return PESERTA_LIST.find((p) => Number(p.bib) === numericBib)
 }
 
 export function loadSpinHistory(): SpinHistoryItem[] {

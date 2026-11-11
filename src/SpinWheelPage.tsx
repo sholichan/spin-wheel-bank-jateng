@@ -87,12 +87,12 @@ function getInitialParams(): InitialParams {
   const bib: number = !Number.isNaN(parsedBib)
     ? parsedBib
     : screen === 'win' || screen === 'zonk'
-      ? (PESERTA_LIST[0]?.BIB ?? 10128)
+      ? Number(PESERTA_LIST[0]?.bib ?? 10128)
       : 0
   const matchedPeserta = findPesertaByBib(bib)
   const theme: ThemeMode =
     screen !== 'start' && matchedPeserta
-      ? getThemeFromKategori(matchedPeserta.KATEGORI)
+      ? getThemeFromKategori(matchedPeserta.kategori)
       : themeParam === 'xtrarun'
         ? 'xtrarun'
         : 'saveduit'
@@ -174,7 +174,7 @@ export default function SpinWheelPage() {
         <>
           Nomor BIB{' '}
           <strong>
-            "{currentBib}" ({peserta.NAMA})
+            "{currentBib}" ({peserta.nama})
           </strong>{' '}
           sudah pernah bermain dan tidak bisa bermain lagi!
         </>,
@@ -183,7 +183,7 @@ export default function SpinWheelPage() {
     }
 
     setBibNumber(currentBib)
-    setTheme(getThemeFromKategori(peserta.KATEGORI))
+    setTheme(getThemeFromKategori(peserta.kategori))
     setWarningMessage(null)
     setWelcomePeserta(peserta)
   }
@@ -234,8 +234,8 @@ export default function SpinWheelPage() {
 
       void addSpinHistoryRecord({
         bib: bibNumber,
-        nama: peserta?.NAMA ?? `Peserta #${bibNumber}`,
-        kategori: peserta?.KATEGORI ?? theme.toUpperCase(),
+        nama: peserta?.nama ?? `Peserta #${bibNumber}`,
+        kategori: peserta?.kategori ?? theme.toUpperCase(),
         reward: rewardLabel,
         isWin: chosenSegment.isWin,
       })
@@ -423,8 +423,8 @@ export default function SpinWheelPage() {
                 id="welcome-modal-desc"
                 className="warning-modal-message font-open-sauce"
               >
-                Hallo <strong>{welcomePeserta.NAMA}</strong> dengan nomor{' '}
-                <strong>{welcomePeserta.BIB}</strong>.
+                Hallo <strong>{welcomePeserta.nama}</strong> dengan nomor{' '}
+                <strong>{welcomePeserta.bib}</strong>.
               </p>
               <button
                 type="button"
