@@ -2,7 +2,7 @@ import pesertaData from './data/peserta.json'
 
 export interface Peserta {
   no: number
-  bib: number | string
+  bib: string
   nama: string
   kategori: string
 }
