@@ -1,6 +1,6 @@
 import { type FormEvent, useCallback, useEffect, useMemo, useState } from 'react'
 import './AdminPage.css'
-import logoBankJateng from './assets/logo-bank-jateng.png'
+import { getCachedAssets, preloadAllAssets } from './assetCache'
 import AdminLayout from './layouts/AdminLayout'
 import {
   clearSpinHistory,
@@ -52,9 +52,17 @@ export default function AdminPage() {
   const [kategoriFilter, setKategoriFilter] = useState<KategoriFilter>('ALL')
   const [rewardFilter, setRewardFilter] = useState<RewardFilter>('ALL')
   const [confirmClearModal, setConfirmClearModal] = useState<boolean>(false)
+  const [logoBankJateng, setLogoBankJateng] = useState<string>(
+    () => getCachedAssets().logoBankJateng,
+  )
 
   useEffect(() => {
     document.title = 'Admin - Spin History Bank Jateng'
+
+    let active = true
+    void preloadAllAssets().then((cached) => {
+      if (active) setLogoBankJateng(cached.logoBankJateng)
+    })
 
     const logPageDimensions = () => {
       console.log(
@@ -64,7 +72,10 @@ export default function AdminPage() {
 
     logPageDimensions()
     window.addEventListener('resize', logPageDimensions)
-    return () => window.removeEventListener('resize', logPageDimensions)
+    return () => {
+      active = false
+      window.removeEventListener('resize', logPageDimensions)
+    }
   }, [])
 
   // Verify existing session token on mount

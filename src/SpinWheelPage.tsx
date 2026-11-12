@@ -1,5 +1,11 @@
 import { type FormEvent, type ReactNode, useEffect, useRef, useState } from 'react'
 import './App.css'
+import {
+  type CachedAssets,
+  getCachedAssets,
+  isAssetsPreloaded,
+  preloadAllAssets,
+} from './assetCache'
 import SpinWheelLayout from './layouts/SpinWheelLayout'
 import {
   addSpinHistoryRecord,
@@ -9,18 +15,6 @@ import {
   type Peserta,
   PESERTA_LIST,
 } from './spinHistory'
-
-import xtrarunBg from './assets/xtrarun-bg.png'
-import saveduitBg from './assets/saveduit-bg.png'
-import titleXtrarun from './assets/title-xtrarun.png'
-import logoBankJateng from './assets/logo-bank-jateng.png'
-import spinWheelXtrarun from './assets/spin-wheel-xtrarun.png'
-import spinWheelSaveduit from './assets/spin-wheel-saveduit.png'
-import pointerImg from './assets/pointer.png'
-import spinButtonCircleSvg from './assets/spin-button-circle.svg'
-import nomorUndianCircleSvg from './assets/nomor-undian-circle.svg'
-import motifRedImg from './assets/motif-red.png'
-import motifYellowImg from './assets/motif-yellow.png'
 
 const DESIGN_WIDTH = 1080
 const DESIGN_HEIGHT = 1920
@@ -115,11 +109,26 @@ export default function SpinWheelPage() {
   const [rotation, setRotation] = useState<number>(0)
   const [isSpinning, setIsSpinning] = useState<boolean>(false)
   const [scale, setScale] = useState<number>(1)
+  const [assets, setAssets] = useState<CachedAssets>(() => getCachedAssets())
+  const [assetsReady, setAssetsReady] = useState<boolean>(() =>
+    isAssetsPreloaded(),
+  )
   const spinTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     document.title = 'Bank Jateng - Lucky Spin XtraRun & SaveDuit'
     void fetchSpinHistory()
+
+    let active = true
+    void preloadAllAssets().then((cached) => {
+      if (!active) return
+      setAssets(cached)
+      setAssetsReady(true)
+    })
+
+    return () => {
+      active = false
+    }
   }, [])
 
   useEffect(() => {
@@ -255,8 +264,6 @@ export default function SpinWheelPage() {
     setScreen('start')
   }
 
-  const backgroundImg = theme === 'saveduit' ? saveduitBg : xtrarunBg
-  const wheelImg = theme === 'saveduit' ? spinWheelSaveduit : spinWheelXtrarun
   const isSaveduitResult =
     theme === 'saveduit' && (screen === 'win' || screen === 'zonk')
 
@@ -286,9 +293,104 @@ export default function SpinWheelPage() {
           transform: Math.abs(scale - 1) < 0.001 ? 'none' : `scale(${scale})`,
         }}
       >
-        {/* Background Layer (14:24 / 14:37) */}
+        {/* Hidden GPU Preload Layer: keeps all decoded images resident in DOM at all times */}
+        <div className="preload-gpu-cache" aria-hidden="true">
+          <img
+            alt=""
+            src={assets.saveduitBg}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.xtrarunBg}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.titleXtrarun}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.logoBankJateng}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.spinWheelSaveduit}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.spinWheelXtrarun}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.pointerImg}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.spinButtonCircleSvg}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.nomorUndianCircleSvg}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.motifRedImg}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            src={assets.motifYellowImg}
+            loading="eager"
+            decoding="sync"
+          />
+        </div>
+
+        {/* Initial Asset Preload Overlay */}
+        {!assetsReady && (
+          <div className="preload-modal-backdrop" role="status" aria-live="polite">
+            <div className="preload-spinner" />
+            <p className="preload-modal-text font-hanson">MEMUAT ASSET...</p>
+          </div>
+        )}
+
+        {/* Background Layer (14:24 / 14:37) - Both backgrounds stay mounted for instant 0ms switch */}
         <div className="layer-bg" data-node-id="14:24" data-name="XTRARUN 1">
-          <img alt="" className="img-cover" src={backgroundImg} />
+          <img
+            alt=""
+            className={`img-cover layer-swap-img ${
+              theme === 'saveduit' ? 'is-active' : ''
+            }`}
+            src={assets.saveduitBg}
+            loading="eager"
+            decoding="sync"
+          />
+          <img
+            alt=""
+            className={`img-cover layer-swap-img ${
+              theme === 'xtrarun' ? 'is-active' : ''
+            }`}
+            src={assets.xtrarunBg}
+            loading="eager"
+            decoding="sync"
+          />
         </div>
 
         {/* Title Header Layer (14:26 / 14:38) */}
@@ -297,7 +399,13 @@ export default function SpinWheelPage() {
           data-node-id="14:26"
           data-name="TITTLE XTRARUN 1"
         >
-          <img alt="" className="img-cover" src={titleXtrarun} />
+          <img
+            alt=""
+            className="img-cover"
+            src={assets.titleXtrarun}
+            loading="eager"
+            decoding="sync"
+          />
         </div>
 
         {/* Bank Jateng Logo Layer (14:28 / 14:39) */}
@@ -306,7 +414,13 @@ export default function SpinWheelPage() {
           data-node-id="14:28"
           data-name="logo bank jateng background biru-02 1"
         >
-          <img alt="Bank Jateng" className="img-cover" src={logoBankJateng} />
+          <img
+            alt="Bank Jateng"
+            className="img-cover"
+            src={assets.logoBankJateng}
+            loading="eager"
+            decoding="sync"
+          />
         </div>
 
         {/* SCREEN 1: START SCREEN (14:23 / 15:134) */}
@@ -442,7 +556,7 @@ export default function SpinWheelPage() {
         {/* SCREEN 2, 3, 4: SPIN WHEEL & RESULT OVERLAYS (14:36, 14:50, 156:12) */}
         {screen !== 'start' && (
           <>
-            {/* Wheel Image (14:48 / 156:2) */}
+            {/* Wheel Image (14:48 / 156:2) - Both wheels stay mounted for instant switch */}
             <div
               className="wheel-container"
               data-node-id="14:48"
@@ -457,7 +571,24 @@ export default function SpinWheelPage() {
                     : 'none',
                 }}
               >
-                <img alt="" className="img-cover" src={wheelImg} />
+                <img
+                  alt=""
+                  className={`img-cover layer-swap-img ${
+                    theme === 'saveduit' ? 'is-active' : ''
+                  }`}
+                  src={assets.spinWheelSaveduit}
+                  loading="eager"
+                  decoding="sync"
+                />
+                <img
+                  alt=""
+                  className={`img-cover layer-swap-img ${
+                    theme === 'xtrarun' ? 'is-active' : ''
+                  }`}
+                  src={assets.spinWheelXtrarun}
+                  loading="eager"
+                  decoding="sync"
+                />
               </div>
             </div>
 
@@ -467,7 +598,13 @@ export default function SpinWheelPage() {
               data-node-id="14:49"
               data-name="POINTER 1"
             >
-              <img alt="" className="img-cover" src={pointerImg} />
+              <img
+                alt=""
+                className="img-cover"
+                src={assets.pointerImg}
+                loading="eager"
+                decoding="sync"
+              />
             </div>
 
             {/* Center Spin Hub Button (57:4 / 211:2 / 211:7 / 188:6) */}
@@ -482,9 +619,11 @@ export default function SpinWheelPage() {
               <img
                 alt=""
                 className="btn-spin-circle-svg"
-                src={spinButtonCircleSvg}
+                src={assets.spinButtonCircleSvg}
                 width="250"
                 height="250"
+                loading="eager"
+                decoding="sync"
                 data-node-id="57:2"
               />
               <div
@@ -492,7 +631,13 @@ export default function SpinWheelPage() {
                 data-node-id="188:3"
                 data-name="logo bank jateng background biru-02 1"
               >
-                <img alt="" className="img-cover" src={logoBankJateng} />
+                <img
+                  alt=""
+                  className="img-cover"
+                  src={assets.logoBankJateng}
+                  loading="eager"
+                  decoding="sync"
+                />
               </div>
             </button>
 
@@ -518,35 +663,65 @@ export default function SpinWheelPage() {
                     data-node-id="14:112"
                     data-name="motif red 1"
                   >
-                    <img alt="" className="img-cover" src={motifRedImg} />
+                    <img
+                      alt=""
+                      className="img-cover"
+                      src={assets.motifRedImg}
+                      loading="eager"
+                      decoding="sync"
+                    />
                   </div>
                   <div
                     className="motif-red-2"
                     data-node-id="14:113"
                     data-name="motif red 2"
                   >
-                    <img alt="" className="img-cover" src={motifRedImg} />
+                    <img
+                      alt=""
+                      className="img-cover"
+                      src={assets.motifRedImg}
+                      loading="eager"
+                      decoding="sync"
+                    />
                   </div>
                   <div
                     className="motif-yellow-1"
                     data-node-id="14:115"
                     data-name="motif yellow 1"
                   >
-                    <img alt="" className="img-cover" src={motifYellowImg} />
+                    <img
+                      alt=""
+                      className="img-cover"
+                      src={assets.motifYellowImg}
+                      loading="eager"
+                      decoding="sync"
+                    />
                   </div>
                   <div
                     className="motif-yellow-2"
                     data-node-id="14:116"
                     data-name="motif yellow 2"
                   >
-                    <img alt="" className="img-cover" src={motifYellowImg} />
+                    <img
+                      alt=""
+                      className="img-cover"
+                      src={assets.motifYellowImg}
+                      loading="eager"
+                      decoding="sync"
+                    />
                   </div>
                   <div
                     className="motif-yellow-3"
                     data-node-id="14:117"
                     data-name="motif yellow 3"
                   >
-                    <img alt="" className="img-cover" src={motifYellowImg} />
+                    <img
+                      alt=""
+                      className="img-cover"
+                      src={assets.motifYellowImg}
+                      loading="eager"
+                      decoding="sync"
+                    />
                   </div>
                   <p
                     className="result-heading-hadiah font-hanson"
@@ -570,9 +745,11 @@ export default function SpinWheelPage() {
                       <img
                         alt=""
                         className="nomor-undian-circle-svg"
-                        src={nomorUndianCircleSvg}
+                        src={assets.nomorUndianCircleSvg}
                         width="337"
                         height="337"
+                        loading="eager"
+                        decoding="sync"
                       />
                     </div>
                     <p

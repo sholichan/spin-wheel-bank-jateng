@@ -85,6 +85,71 @@
   pointer-events: none;
 }
 
+.layer-swap-img {
+  opacity: 0;
+  will-change: opacity;
+}
+
+.layer-swap-img.is-active {
+  opacity: 1;
+}
+
+/* Hidden GPU Preload Cache: keeps all textures decoded in VRAM/RAM */
+.preload-gpu-cache {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+  opacity: 0.001;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.preload-gpu-cache img {
+  width: 2px;
+  height: 2px;
+  object-fit: cover;
+}
+
+/* Initial Asset Preload Overlay */
+.preload-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 1080px;
+  height: 1920px;
+  background: radial-gradient(circle at center, #254085 0%, #0e1938 100%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.preload-spinner {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #f8a619;
+  animation: preloadSpin 0.8s linear infinite;
+}
+
+@keyframes preloadSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.preload-modal-text {
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
 /* START SCREEN: BIB Input Group (14:122) */
 .start-bib-card {
   position: absolute;
