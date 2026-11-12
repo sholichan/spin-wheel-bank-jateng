@@ -85,11 +85,13 @@ function getInitialParams(): InitialParams {
       : 0
   const matchedPeserta = findPesertaByBib(bib)
   const theme: ThemeMode =
-    screen !== 'start' && matchedPeserta
-      ? getThemeFromKategori(matchedPeserta.kategori)
-      : themeParam === 'xtrarun'
-        ? 'xtrarun'
-        : 'saveduit'
+    screen === 'start'
+      ? 'saveduit'
+      : matchedPeserta
+        ? getThemeFromKategori(matchedPeserta.kategori)
+        : themeParam === 'xtrarun'
+          ? 'xtrarun'
+          : 'saveduit'
   const prize =
     prizeParam && ['1', '2', '3', '4', '5'].includes(prizeParam)
       ? prizeParam
@@ -192,12 +194,15 @@ export default function SpinWheelPage() {
     }
 
     setBibNumber(currentBib)
-    setTheme(getThemeFromKategori(peserta.kategori))
+    setTheme('saveduit')
     setWarningMessage(null)
     setWelcomePeserta(peserta)
   }
 
   const handleContinueWelcome = () => {
+    if (welcomePeserta) {
+      setTheme(getThemeFromKategori(welcomePeserta.kategori))
+    }
     setWelcomePeserta(null)
     setScreen('wheel')
   }
@@ -215,6 +220,7 @@ export default function SpinWheelPage() {
           tidak bisa bermain lagi!
         </>,
       )
+      setTheme('saveduit')
       setScreen('start')
       return
     }
@@ -261,30 +267,30 @@ export default function SpinWheelPage() {
   const handleClaim = () => {
     setIsSpinning(false)
     setBibNumber(0)
+    setTheme('saveduit')
     setScreen('start')
   }
 
+  const activeTheme: ThemeMode = screen === 'start' ? 'saveduit' : theme
   const isSaveduitResult =
-    theme === 'saveduit' && (screen === 'win' || screen === 'zonk')
+    activeTheme === 'saveduit' && (screen === 'win' || screen === 'zonk')
 
   return (
-    <SpinWheelLayout theme={theme}>
+    <SpinWheelLayout theme={activeTheme}>
       <div
         className="kiosk-stage"
         data-node-id={
           screen === 'start'
-            ? theme === 'saveduit'
-              ? '15:134'
-              : '14:23'
+            ? '15:134'
             : screen === 'wheel'
-              ? theme === 'saveduit'
+              ? activeTheme === 'saveduit'
                 ? '15:146'
                 : '14:36'
               : screen === 'win'
-                ? theme === 'saveduit'
+                ? activeTheme === 'saveduit'
                   ? '15:152'
                   : '14:50'
-                : theme === 'saveduit'
+                : activeTheme === 'saveduit'
                   ? '159:46'
                   : '156:12'
         }
@@ -376,7 +382,7 @@ export default function SpinWheelPage() {
           <img
             alt=""
             className={`img-cover layer-swap-img ${
-              theme === 'saveduit' ? 'is-active' : ''
+              activeTheme === 'saveduit' ? 'is-active' : ''
             }`}
             src={assets.saveduitBg}
             loading="eager"
@@ -385,7 +391,7 @@ export default function SpinWheelPage() {
           <img
             alt=""
             className={`img-cover layer-swap-img ${
-              theme === 'xtrarun' ? 'is-active' : ''
+              activeTheme === 'xtrarun' ? 'is-active' : ''
             }`}
             src={assets.xtrarunBg}
             loading="eager"

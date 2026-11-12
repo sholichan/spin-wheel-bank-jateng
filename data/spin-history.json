@@ -1,5 +1,50 @@
 [
   {
+    "id": "1794507734709-ahafcn",
+    "bib": 33181,
+    "nama": "Agus RinRin Iriana",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-12T18:22:14.709Z"
+  },
+  {
+    "id": "1794507722597-iz2w4t",
+    "bib": 20004,
+    "nama": "Yanuar Adi Wibisono",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-12T18:22:02.597Z"
+  },
+  {
+    "id": "1794507007314-iol166",
+    "bib": 33186,
+    "nama": "Irene Hidayat",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-12T18:10:07.314Z"
+  },
+  {
+    "id": "1794506981019-9stetq",
+    "bib": 20003,
+    "nama": "suryani",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-12T18:09:41.019Z"
+  },
+  {
+    "id": "1794506955685-xo76jx",
+    "bib": 10145,
+    "nama": "ARIF NURKHAMID",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-12T18:09:15.685Z"
+  },
+  {
     "id": "1794283976687-9o3nxf",
     "bib": 10136,
     "nama": "Daniel Rudy Christian",
