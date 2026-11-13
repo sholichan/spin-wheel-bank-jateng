@@ -69,6 +69,9 @@ export default function AdminPage() {
   const [kategoriFilter, setKategoriFilter] = useState<KategoriFilter>('ALL')
   const [rewardFilter, setRewardFilter] = useState<RewardFilter>('ALL')
   const [confirmClearModal, setConfirmClearModal] = useState<boolean>(false)
+  const [clearPinInput, setClearPinInput] = useState<string>('')
+  const [clearPinError, setClearPinError] = useState<string | null>(null)
+  const [isClearingHistory, setIsClearingHistory] = useState<boolean>(false)
   const [pesertaModalMode, setPesertaModalMode] =
     useState<PesertaModalMode>(null)
   const [pinInput, setPinInput] = useState<string>('')
@@ -229,10 +232,44 @@ export default function AdminPage() {
     setHistory(updated)
   }
 
-  const handleConfirmClearAll = async () => {
-    const updated = await clearSpinHistory()
-    setHistory(updated)
+  const openConfirmClearModal = () => {
+    setConfirmClearModal(true)
+    setClearPinInput('')
+    setClearPinError(null)
+  }
+
+  const closeConfirmClearModal = () => {
+    if (isClearingHistory) return
     setConfirmClearModal(false)
+    setClearPinInput('')
+    setClearPinError(null)
+  }
+
+  const handleConfirmClearAll = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const cleanPin = clearPinInput.trim()
+
+    if (!cleanPin) {
+      setClearPinError('Harap masukkan PIN proteksi terlebih dahulu!')
+      return
+    }
+
+    if (cleanPin !== PESERTA_PIN) {
+      setClearPinError('PIN salah! Masukkan PIN yang benar.')
+      return
+    }
+
+    setIsClearingHistory(true)
+    setClearPinError(null)
+    try {
+      const updated = await clearSpinHistory()
+      setHistory(updated)
+      setConfirmClearModal(false)
+      setClearPinInput('')
+      setPesertaNotice('Seluruh data spin history berhasil direset.')
+    } finally {
+      setIsClearingHistory(false)
+    }
   }
 
   const handleExportCsv = () => {
@@ -546,7 +583,7 @@ export default function AdminPage() {
               <button
                 type="button"
                 className="admin-btn admin-btn-danger"
-                onClick={() => setConfirmClearModal(true)}
+                onClick={openConfirmClearModal}
               >
                 Reset History
               </button>
@@ -737,10 +774,10 @@ export default function AdminPage() {
           className="admin-modal-backdrop"
           role="dialog"
           aria-modal="true"
-          onClick={() => setConfirmClearModal(false)}
+          onClick={closeConfirmClearModal}
         >
           <div
-            className="admin-modal-card"
+            className="admin-modal-card admin-modal-card-pin"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="admin-modal-title admin-font-display">
@@ -748,24 +785,57 @@ export default function AdminPage() {
             </h2>
             <p className="admin-modal-desc">
               Seluruh data di tabel spin history akan dihapus permanen dari
-              server.
+              server. Masukkan PIN proteksi untuk melanjutkan.
             </p>
-            <div className="admin-modal-actions">
-              <button
-                type="button"
-                className="admin-btn admin-btn-secondary"
-                onClick={() => setConfirmClearModal(false)}
-              >
-                Batal
-              </button>
-              <button
-                type="button"
-                className="admin-btn admin-btn-danger"
-                onClick={() => void handleConfirmClearAll()}
-              >
-                Ya, Hapus Semua
-              </button>
-            </div>
+
+            {clearPinError && (
+              <div className="admin-login-alert" role="alert">
+                {clearPinError}
+              </div>
+            )}
+
+            <form
+              className="admin-pin-form"
+              onSubmit={(e) => void handleConfirmClearAll(e)}
+            >
+              <div className="admin-form-group">
+                <label htmlFor="admin-clear-pin" className="admin-form-label">
+                  PIN Proteksi
+                </label>
+                <input
+                  id="admin-clear-pin"
+                  type="password"
+                  inputMode="numeric"
+                  className="admin-form-input admin-pin-input"
+                  placeholder="Masukkan PIN proteksi"
+                  autoComplete="off"
+                  autoFocus
+                  value={clearPinInput}
+                  onChange={(e) => {
+                    setClearPinInput(e.target.value)
+                    if (clearPinError) setClearPinError(null)
+                  }}
+                />
+              </div>
+
+              <div className="admin-modal-actions">
+                <button
+                  type="button"
+                  className="admin-btn admin-btn-secondary"
+                  onClick={closeConfirmClearModal}
+                  disabled={isClearingHistory}
+                >
+                  Batal
+                </button>
+                <button
+                  type="submit"
+                  className="admin-btn admin-btn-danger"
+                  disabled={isClearingHistory}
+                >
+                  {isClearingHistory ? 'Menghapus...' : 'Ya, Hapus Semua'}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

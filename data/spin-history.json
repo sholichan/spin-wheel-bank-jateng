@@ -1,110 +1,2180 @@
 [
   {
-    "id": "1794507734709-ahafcn",
-    "bib": 33181,
-    "nama": "Agus RinRin Iriana",
-    "kategori": "XTRARUN",
-    "reward": "Hadiah 4",
-    "isWin": true,
-    "timestamp": "2026-11-12T18:22:14.709Z"
-  },
-  {
-    "id": "1794507722597-iz2w4t",
-    "bib": 20004,
-    "nama": "Yanuar Adi Wibisono",
+    "id": "1794578023146-7gbz8m",
+    "bib": 30008,
+    "nama": "Herlambang Andifa Dewanti",
     "kategori": "SAVEDUIT",
     "reward": "ZONK",
     "isWin": false,
-    "timestamp": "2026-11-12T18:22:02.597Z"
+    "timestamp": "2026-11-13T13:53:43.146Z"
   },
   {
-    "id": "1794507007314-iol166",
-    "bib": 33186,
-    "nama": "Irene Hidayat",
-    "kategori": "XTRARUN",
-    "reward": "Hadiah 4",
-    "isWin": true,
-    "timestamp": "2026-11-12T18:10:07.314Z"
-  },
-  {
-    "id": "1794506981019-9stetq",
-    "bib": 20003,
-    "nama": "suryani",
-    "kategori": "SAVEDUIT",
-    "reward": "Hadiah 5",
-    "isWin": true,
-    "timestamp": "2026-11-12T18:09:41.019Z"
-  },
-  {
-    "id": "1794506955685-xo76jx",
-    "bib": 10145,
-    "nama": "ARIF NURKHAMID",
-    "kategori": "SAVEDUIT",
-    "reward": "ZONK",
-    "isWin": false,
-    "timestamp": "2026-11-12T18:09:15.685Z"
-  },
-  {
-    "id": "1794283976687-9o3nxf",
-    "bib": 10136,
-    "nama": "Daniel Rudy Christian",
-    "kategori": "SAVEDUIT",
-    "reward": "Hadiah 1",
-    "isWin": true,
-    "timestamp": "2026-11-10T04:12:56.687Z"
-  },
-  {
-    "id": "1794283944302-kw35pv",
-    "bib": 10137,
-    "nama": "Shalahuddin Shantika Putra",
-    "kategori": "SAVEDUIT",
-    "reward": "Hadiah 3",
-    "isWin": true,
-    "timestamp": "2026-11-10T04:12:24.302Z"
-  },
-  {
-    "id": "1794283608190-ohbxx2",
-    "bib": 10138,
-    "nama": "Henry Hartono",
-    "kategori": "XTRARUN",
-    "reward": "Hadiah 5",
-    "isWin": true,
-    "timestamp": "2026-11-10T04:06:48.190Z"
-  },
-  {
-    "id": "1794283101539-vi1okb",
-    "bib": 10139,
-    "nama": "Rohmat Adi Nugroho",
-    "kategori": "XTRARUN",
-    "reward": "Hadiah 5",
-    "isWin": true,
-    "timestamp": "2026-11-10T03:58:21.539Z"
-  },
-  {
-    "id": "1793948372670-o2wzi4",
-    "bib": 10132,
-    "nama": "DAVID INDRA SALIM",
-    "kategori": "SAVEDUIT",
-    "reward": "Hadiah 3",
-    "isWin": true,
-    "timestamp": "2026-11-06T06:59:32.671Z"
-  },
-  {
-    "id": "1793947372275-6r1jxq",
-    "bib": 10130,
-    "nama": "Ronny Fajar Hidayat",
+    "id": "1794577727291-ynky0w",
+    "bib": 20013,
+    "nama": "Eryunpas Setya Nurlaksono",
     "kategori": "SAVEDUIT",
     "reward": "Hadiah 2",
     "isWin": true,
-    "timestamp": "2026-11-06T06:42:52.275Z"
+    "timestamp": "2026-11-13T13:48:47.291Z"
   },
   {
-    "id": "1793947333061-5ie6yw",
-    "bib": 10140,
-    "nama": "Alies Ellen",
+    "id": "1794577612197-xxyox2",
+    "bib": 900004,
+    "nama": "Dinada Puruhita",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:46:52.197Z"
+  },
+  {
+    "id": "1794577506531-jj50yi",
+    "bib": 20649,
+    "nama": "FEBRI RUDYANTO",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:45:06.531Z"
+  },
+  {
+    "id": "1794577352091-7kwo2q",
+    "bib": 20651,
+    "nama": "liong hwie sian",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T13:42:32.091Z"
+  },
+  {
+    "id": "1794577278221-iozjm9",
+    "bib": 20652,
+    "nama": "Felly yunita",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:41:18.221Z"
+  },
+  {
+    "id": "1794576897168-ekx6b1",
+    "bib": 10475,
+    "nama": "TRI SETYANTO APRIYADI",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T13:34:57.168Z"
+  },
+  {
+    "id": "1794576058711-beb2ys",
+    "bib": 30019,
+    "nama": "Abdul Azies Kurniawan",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:20:58.711Z"
+  },
+  {
+    "id": "1794576040629-fqr4t0",
+    "bib": 30020,
+    "nama": "affi Zakiyya",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T13:20:40.629Z"
+  },
+  {
+    "id": "1794575941799-epwmmf",
+    "bib": 10009,
+    "nama": "Luqman Ramadhan",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:19:01.799Z"
+  },
+  {
+    "id": "1794575642733-le3m7j",
+    "bib": 20022,
+    "nama": "TARA HIJRIYANDANI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:14:02.733Z"
+  },
+  {
+    "id": "1794575640044-e5mvob",
+    "bib": 20025,
+    "nama": "NENDEN NURHAYATI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:14:00.044Z"
+  },
+  {
+    "id": "1794575525401-76xi9l",
+    "bib": 900014,
+    "nama": "Putri Malinda Larassai",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T13:12:05.401Z"
+  },
+  {
+    "id": "1794575507494-0s134f",
+    "bib": 30028,
+    "nama": "Erni Nur Farikha",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:11:47.494Z"
+  },
+  {
+    "id": "1794575407511-p4voez",
+    "bib": 30029,
+    "nama": "SOFA PRIMATIR",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T13:10:07.511Z"
+  },
+  {
+    "id": "1794575229368-a7m4je",
+    "bib": 20033,
+    "nama": "andhista paramita yunianfi",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:07:09.368Z"
+  },
+  {
+    "id": "1794575195074-plrgtp",
+    "bib": 20660,
+    "nama": "Russianik",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:06:35.074Z"
+  },
+  {
+    "id": "1794575119899-939jle",
+    "bib": 10018,
+    "nama": "Ardian Rosady",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T13:05:19.899Z"
+  },
+  {
+    "id": "1794575014109-pxiu6n",
+    "bib": 900020,
+    "nama": "SHAWN ALAN WOOD",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T13:03:34.109Z"
+  },
+  {
+    "id": "1794574313860-n5g9g0",
+    "bib": 20041,
+    "nama": "Husna Arif W",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:51:53.860Z"
+  },
+  {
+    "id": "1794574298057-c813m9",
+    "bib": 30039,
+    "nama": "Peni Woro Pamungkas",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:51:38.057Z"
+  },
+  {
+    "id": "1794574273484-vdvjg5",
+    "bib": 20051,
+    "nama": "IHWAN NOOR KURNIAWAN",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:51:13.484Z"
+  },
+  {
+    "id": "1794574232225-hbv1g7",
+    "bib": 900024,
+    "nama": "Wahyu Ior",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:50:32.225Z"
+  },
+  {
+    "id": "1794574221554-gwrs58",
+    "bib": 20053,
+    "nama": "Mergita Eka Nuryuana",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:50:21.554Z"
+  },
+  {
+    "id": "1794574198084-843n5w",
+    "bib": 20676,
+    "nama": "Vina Subaidi",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:49:58.084Z"
+  },
+  {
+    "id": "1794574086409-nd8610",
+    "bib": 900027,
+    "nama": "Radit",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:48:06.409Z"
+  },
+  {
+    "id": "1794574065541-lisu3f",
+    "bib": 20681,
+    "nama": "Werry Yulianto",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:47:45.541Z"
+  },
+  {
+    "id": "1794574022209-787okc",
+    "bib": 10037,
+    "nama": "Mufid Syaifurrahman",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:47:02.209Z"
+  },
+  {
+    "id": "1794573606325-ceii5j",
+    "bib": 900030,
+    "nama": "Arya Raditya",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:40:06.325Z"
+  },
+  {
+    "id": "1794573503077-2dh68u",
+    "bib": 20076,
+    "nama": "Karmelia Juliani Tjahjanto",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:38:23.077Z"
+  },
+  {
+    "id": "1794573342668-5cbsx9",
+    "bib": 10492,
+    "nama": "indra adriarta wijaya",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:35:42.668Z"
+  },
+  {
+    "id": "1794573247278-q9ps6j",
+    "bib": 900033,
+    "nama": "Join Bahari",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:34:07.278Z"
+  },
+  {
+    "id": "1794572991226-5yhs6n",
+    "bib": 900034,
+    "nama": "JOHANES TIRTAGUNADI",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:29:51.226Z"
+  },
+  {
+    "id": "1794572753975-rdptee",
+    "bib": 10498,
+    "nama": "Dwi Danang Alfian Nofianto",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:25:53.975Z"
+  },
+  {
+    "id": "1794572738012-6cu3oe",
+    "bib": 10049,
+    "nama": "Yosafat Darmawan",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:25:38.012Z"
+  },
+  {
+    "id": "1794572708326-30fd87",
+    "bib": 20708,
+    "nama": "DANUK SETYORINI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:25:08.326Z"
+  },
+  {
+    "id": "1794572113023-byogqz",
+    "bib": 900038,
+    "nama": "clarinta",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:15:13.023Z"
+  },
+  {
+    "id": "1794572063826-isyrgi",
+    "bib": 10055,
+    "nama": "michael sugiharto",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:14:23.826Z"
+  },
+  {
+    "id": "1794572044489-ss39ez",
+    "bib": 10056,
+    "nama": "Robby Gabriel Sibarani",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:14:04.489Z"
+  },
+  {
+    "id": "1794571813923-8ywddp",
+    "bib": 30089,
+    "nama": "SITI CHOLISNA",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:10:13.923Z"
+  },
+  {
+    "id": "1794571655019-ey7i2t",
+    "bib": 10057,
+    "nama": "Cahyadi Tjhaij",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T12:07:35.019Z"
+  },
+  {
+    "id": "1794571367013-w2v0vo",
+    "bib": 20719,
+    "nama": "Widhi Dhatu",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T12:02:47.013Z"
+  },
+  {
+    "id": "1794571062504-uu3wuq",
+    "bib": 20722,
+    "nama": "ASTI MAULITA",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:57:42.504Z"
+  },
+  {
+    "id": "1794571004227-iew812",
+    "bib": 30093,
+    "nama": "PRISCILLIA LENDRA",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:56:44.227Z"
+  },
+  {
+    "id": "1794570977206-wfq3cv",
+    "bib": 30095,
+    "nama": "Heni Supatmiyati",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:56:17.206Z"
+  },
+  {
+    "id": "1794570960752-pz520s",
+    "bib": 10509,
+    "nama": "tatang Adi permana",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:56:00.752Z"
+  },
+  {
+    "id": "1794570871146-vnblzp",
+    "bib": 900048,
+    "nama": "FEBRI FADHIL",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:54:31.146Z"
+  },
+  {
+    "id": "1794570741045-0rlw4r",
+    "bib": 20106,
+    "nama": "Muhammad Farid Adikara",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:52:21.045Z"
+  },
+  {
+    "id": "1794570732388-g4m9ps",
+    "bib": 30658,
+    "nama": "OYON",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:52:12.388Z"
+  },
+  {
+    "id": "1794570699233-ef038q",
+    "bib": 20112,
+    "nama": "Dian Wahyuni",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T11:51:39.233Z"
+  },
+  {
+    "id": "1794570529516-o0qf9a",
+    "bib": 20742,
+    "nama": "Nunik Herawati",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T11:48:49.516Z"
+  },
+  {
+    "id": "1794570498824-zihmix",
+    "bib": 10514,
+    "nama": "Bob Sadiwijaya",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T11:48:18.824Z"
+  },
+  {
+    "id": "1794570114916-nhrf1v",
+    "bib": 10515,
+    "nama": "BENY ISWAHYUDI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:41:54.916Z"
+  },
+  {
+    "id": "1794570034910-gh211n",
+    "bib": 20751,
+    "nama": "Ervinda Wahyu Ardianzah",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:40:34.910Z"
+  },
+  {
+    "id": "1794569995729-vc5cms",
+    "bib": 900056,
+    "nama": "AMALIA",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:39:55.729Z"
+  },
+  {
+    "id": "1794569888673-u8xa4r",
+    "bib": 30664,
+    "nama": "Maria Yohana",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:38:08.673Z"
+  },
+  {
+    "id": "1794569845970-v2tk7t",
+    "bib": 20127,
+    "nama": "Doimir Zanul Arif",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T11:37:25.970Z"
+  },
+  {
+    "id": "1794569459472-p13moi",
+    "bib": 30666,
+    "nama": "Budi Sumardiyanti",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:30:59.472Z"
+  },
+  {
+    "id": "1794569368446-dkw7tg",
+    "bib": 30669,
+    "nama": "Theodorus Yudi Kristanto",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:29:28.446Z"
+  },
+  {
+    "id": "1794568808446-syofhc",
+    "bib": 30121,
+    "nama": "Lanny Hadi Tay",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:20:08.446Z"
+  },
+  {
+    "id": "1794568510907-29p2wx",
+    "bib": 30124,
+    "nama": "dewi fatmawati",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:15:10.907Z"
+  },
+  {
+    "id": "1794568218798-np1geg",
+    "bib": 10075,
+    "nama": "dewi mardiati",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:10:18.798Z"
+  },
+  {
+    "id": "1794568193016-ewgzg0",
+    "bib": 20766,
+    "nama": "deasy affandara",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:09:53.016Z"
+  },
+  {
+    "id": "1794568007128-rdx88p",
+    "bib": 10079,
+    "nama": "Kwan Yudy Efendy Kartono",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T11:06:47.128Z"
+  },
+  {
+    "id": "1794567948462-lspubg",
+    "bib": 30140,
+    "nama": "YOGAWATI",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T11:05:48.462Z"
+  },
+  {
+    "id": "1794567929393-ufh7gb",
+    "bib": 10087,
+    "nama": "Roni Setiawan",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:05:29.393Z"
+  },
+  {
+    "id": "1794567869114-4rysef",
+    "bib": 30147,
+    "nama": "ANASTASIA FELICIA STACY",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T11:04:29.114Z"
+  },
+  {
+    "id": "1794567705612-zw0reg",
+    "bib": 10091,
+    "nama": "Yuli Sriani",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T11:01:45.612Z"
+  },
+  {
+    "id": "1794567531383-5ffiol",
+    "bib": 900070,
+    "nama": "tyas",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:58:51.383Z"
+  },
+  {
+    "id": "1794567492333-4dklyk",
+    "bib": 30677,
+    "nama": "Cynthia Adelina Rahmawati",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T10:58:12.333Z"
+  },
+  {
+    "id": "1794567007077-2xj6qm",
+    "bib": 20166,
+    "nama": "wigi hastuti",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:50:07.077Z"
+  },
+  {
+    "id": "1794566731455-0itgqy",
+    "bib": 30152,
+    "nama": "Niawati Rokhaniah",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T10:45:31.455Z"
+  },
+  {
+    "id": "1794566677184-p250z6",
+    "bib": 900074,
+    "nama": "Tjen Maria",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:44:37.184Z"
+  },
+  {
+    "id": "1794566469762-msp8sr",
+    "bib": 20172,
+    "nama": "ayu",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:41:09.762Z"
+  },
+  {
+    "id": "1794566350443-8eex79",
+    "bib": 10100,
+    "nama": "M AFFANUL HAKIM",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:39:10.443Z"
+  },
+  {
+    "id": "1794566222327-y36qd6",
+    "bib": 900077,
+    "nama": "citra",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T10:37:02.327Z"
+  },
+  {
+    "id": "1794566145003-4p403b",
+    "bib": 10102,
+    "nama": "Robby Kurniawan",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:35:45.003Z"
+  },
+  {
+    "id": "1794565767644-twdxw9",
+    "bib": 30164,
+    "nama": "Rizky Ardianto",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:29:27.644Z"
+  },
+  {
+    "id": "1794565387600-00qlze",
+    "bib": 20773,
+    "nama": "RHEIN",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:23:07.600Z"
+  },
+  {
+    "id": "1794565372703-59mew4",
+    "bib": 20192,
+    "nama": "Dody Budiarso",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T10:22:52.703Z"
+  },
+  {
+    "id": "1794565352815-ffm8md",
+    "bib": 20774,
+    "nama": "JAP KIEM PING",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:22:32.815Z"
+  },
+  {
+    "id": "1794565317734-am80gt",
+    "bib": 20210,
+    "nama": "I Ketut Budi Santosa",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T10:21:57.734Z"
+  },
+  {
+    "id": "1794565130990-j1k8oi",
+    "bib": 20775,
+    "nama": "Robi hari marhesa",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:18:50.990Z"
+  },
+  {
+    "id": "1794565075903-m6qjpt",
+    "bib": 900085,
+    "nama": "HENDRO",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:17:55.903Z"
+  },
+  {
+    "id": "1794564773368-8s0bac",
+    "bib": 900086,
+    "nama": "Riska",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:12:53.368Z"
+  },
+  {
+    "id": "1794564551991-m6tjp0",
+    "bib": 30202,
+    "nama": "soelarso",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:09:11.991Z"
+  },
+  {
+    "id": "1794564416127-uuh4ia",
+    "bib": 20233,
+    "nama": "Dewi Kania",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:06:56.127Z"
+  },
+  {
+    "id": "1794564414701-fbi8u5",
+    "bib": 900089,
+    "nama": "ADI LAKS",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T10:06:54.701Z"
+  },
+  {
+    "id": "1794564309388-p14csq",
+    "bib": 20241,
+    "nama": "Eko Pramono",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T10:05:09.388Z"
+  },
+  {
+    "id": "1794563927621-zptiih",
+    "bib": 10125,
+    "nama": "rizal",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:58:47.621Z"
+  },
+  {
+    "id": "1794563915437-leq1i2",
+    "bib": 20257,
+    "nama": "M Bayu Anjas Widhi Hanggoro",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:58:35.437Z"
+  },
+  {
+    "id": "1794563778900-aqc73r",
+    "bib": 20260,
+    "nama": "Rufi Hafidz Alifian",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:56:18.900Z"
+  },
+  {
+    "id": "1794563575608-7ayn3i",
+    "bib": 900094,
+    "nama": "Prima Agung",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:52:55.608Z"
+  },
+  {
+    "id": "1794563536061-78jm60",
+    "bib": 10128,
+    "nama": "IRFAN NURHADI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:52:16.061Z"
+  },
+  {
+    "id": "1794563392540-i1hpba",
+    "bib": 30231,
+    "nama": "Chrisna Hendarwati",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:49:52.540Z"
+  },
+  {
+    "id": "1794563365516-c2h8il",
+    "bib": 30235,
+    "nama": "dias kurnelia prabawati",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:49:25.516Z"
+  },
+  {
+    "id": "1794563103125-h7lxip",
+    "bib": 30237,
+    "nama": "ignatius juliarto prasetio",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:45:03.125Z"
+  },
+  {
+    "id": "1794563051095-ir4qfk",
+    "bib": 20272,
+    "nama": "Ni Luh Putu Widhyasti",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:44:11.095Z"
+  },
+  {
+    "id": "1794562846236-koe8at",
+    "bib": 900100,
+    "nama": "DIKI GITA",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:40:46.236Z"
+  },
+  {
+    "id": "1794562761765-abhzw6",
+    "bib": 900101,
+    "nama": "HERU ELLEN",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:39:21.765Z"
+  },
+  {
+    "id": "1794562664520-yd48zm",
+    "bib": 30254,
+    "nama": "Tri Nugroho",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:37:44.520Z"
+  },
+  {
+    "id": "1794562652736-2rre4m",
+    "bib": 900103,
+    "nama": "Dikabayu09",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:37:32.736Z"
+  },
+  {
+    "id": "1794562329173-a6jywi",
+    "bib": 20287,
+    "nama": "AVI NUR MAIYATURROCHMAH",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:32:09.173Z"
+  },
+  {
+    "id": "1794562099399-9f4akg",
+    "bib": 10148,
+    "nama": "Erfan Tri Wahyu",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:28:19.399Z"
+  },
+  {
+    "id": "1794562015209-3cjz1y",
+    "bib": 30259,
+    "nama": "Ari Susanti",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:26:55.209Z"
+  },
+  {
+    "id": "1794561900919-dt8ebg",
+    "bib": 20290,
+    "nama": "Esti Mahanani",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:25:00.919Z"
+  },
+  {
+    "id": "1794561631287-p2zshj",
+    "bib": 30262,
+    "nama": "Trimudo Joko Pitono",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:20:31.287Z"
+  },
+  {
+    "id": "1794561453211-wk8t72",
+    "bib": 30267,
+    "nama": "sochatcefortin indera sakti",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:17:33.211Z"
+  },
+  {
+    "id": "1794561183104-89mx70",
+    "bib": 20299,
+    "nama": "Calvin Levyanto Pramono",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:13:03.104Z"
+  },
+  {
+    "id": "1794560919493-xpv4hc",
+    "bib": 10163,
+    "nama": "FAUZAN",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:08:39.493Z"
+  },
+  {
+    "id": "1794560853217-zigmae",
+    "bib": 20308,
+    "nama": "Laura Mervia Irma Sari",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:07:33.217Z"
+  },
+  {
+    "id": "1794560851694-k9c23a",
+    "bib": 30286,
+    "nama": "Widodo",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:07:31.694Z"
+  },
+  {
+    "id": "1794560511604-korpbn",
+    "bib": 30290,
+    "nama": "Faqih Sarwoko",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T09:01:51.604Z"
+  },
+  {
+    "id": "1794560425975-t0o6k8",
+    "bib": 30296,
+    "nama": "Emy Masruroh",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T09:00:25.975Z"
+  },
+  {
+    "id": "1794560302749-1k5b8e",
+    "bib": 900116,
+    "nama": "Yosephie Bertha Hanitya",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:58:22.749Z"
+  },
+  {
+    "id": "1794560237980-8jbyca",
+    "bib": 900117,
+    "nama": "BAEQONI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:57:17.980Z"
+  },
+  {
+    "id": "1794560175383-74jj02",
+    "bib": 20324,
+    "nama": "Ulfi Fauzia",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:56:15.383Z"
+  },
+  {
+    "id": "1794559880606-ftzckg",
+    "bib": 900119,
+    "nama": "arie",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T08:51:20.606Z"
+  },
+  {
+    "id": "1794559879254-7rjov2",
+    "bib": 30305,
+    "nama": "Sisca Agustin Diani Budiman",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T08:51:19.254Z"
+  },
+  {
+    "id": "1794559654632-gdi2dc",
+    "bib": 20334,
+    "nama": "Dhania Aisyah Aurella",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:47:34.632Z"
+  },
+  {
+    "id": "1794559625024-08e9v0",
+    "bib": 900122,
+    "nama": "IDA AYU YONI",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T08:47:05.024Z"
+  },
+  {
+    "id": "1794559550466-c9x1y2",
+    "bib": 20350,
+    "nama": "Gregorius Hari Prasetyo",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:45:50.466Z"
+  },
+  {
+    "id": "1794559522428-oyrhr9",
+    "bib": 10187,
+    "nama": "Luky",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T08:45:22.428Z"
+  },
+  {
+    "id": "1794559095118-p6h6r6",
+    "bib": 10188,
+    "nama": "descha suryantoro",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:38:15.118Z"
+  },
+  {
+    "id": "1794558997626-6jm0zu",
+    "bib": 20354,
+    "nama": "Elizabet Rini Purnqmawati",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T08:36:37.626Z"
+  },
+  {
+    "id": "1794558894117-o1xjcl",
+    "bib": 20360,
+    "nama": "Dina Rova Rasyidah",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:34:54.117Z"
+  },
+  {
+    "id": "1794558803561-mvntkv",
+    "bib": 30336,
+    "nama": "Melkior Krisna Arondaya",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:33:23.561Z"
+  },
+  {
+    "id": "1794558786422-fz28gm",
+    "bib": 900129,
+    "nama": "Yohanes Yugo",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:33:06.422Z"
+  },
+  {
+    "id": "1794558701423-0myckl",
+    "bib": 20363,
+    "nama": "Isro sujangi",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:31:41.423Z"
+  },
+  {
+    "id": "1794558618948-zozltz",
+    "bib": 900131,
+    "nama": "faturrahman",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:30:18.948Z"
+  },
+  {
+    "id": "1794558514032-lsfitw",
+    "bib": 30354,
+    "nama": "ADY PIDEKSO",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:28:34.032Z"
+  },
+  {
+    "id": "1794558491129-bcsbwv",
+    "bib": 10202,
+    "nama": "Seftiana Mukarromah",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:28:11.129Z"
+  },
+  {
+    "id": "1794558318436-x8d8dx",
+    "bib": 20395,
+    "nama": "Icha Arvyda Rhosaliana",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:25:18.436Z"
+  },
+  {
+    "id": "1794557990032-hv3cna",
+    "bib": 20401,
+    "nama": "Linarti Handajani",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:19:50.032Z"
+  },
+  {
+    "id": "1794557963243-vzilqx",
+    "bib": 20404,
+    "nama": "Indria Julvania Mufidah",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T08:19:23.243Z"
+  },
+  {
+    "id": "1794557733526-o8r6v4",
+    "bib": 10207,
+    "nama": "ivan eko harahap",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:15:33.526Z"
+  },
+  {
+    "id": "1794557563101-cdvuh2",
+    "bib": 10208,
+    "nama": "m zudha ghofur",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:12:43.101Z"
+  },
+  {
+    "id": "1794557540600-jc0m53",
+    "bib": 20423,
+    "nama": "Yonatan Octavian",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:12:20.600Z"
+  },
+  {
+    "id": "1794557527298-7irf25",
+    "bib": 10215,
+    "nama": "HILMY FADLLAN",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T08:12:07.298Z"
+  },
+  {
+    "id": "1794557523084-6rwyp4",
+    "bib": 20424,
+    "nama": "Pauzi Famili",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:12:03.084Z"
+  },
+  {
+    "id": "1794557415847-pd0hoh",
+    "bib": 30389,
+    "nama": "Lavinia Nova Lukito",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:10:15.847Z"
+  },
+  {
+    "id": "1794557372708-r52mrn",
+    "bib": 30398,
+    "nama": "rahayu setyaningsih",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:09:32.708Z"
+  },
+  {
+    "id": "1794557339276-k3a56s",
+    "bib": 20434,
+    "nama": "Savira Kinasih Rusmana Putri",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:08:59.276Z"
+  },
+  {
+    "id": "1794557241741-zoxsm0",
+    "bib": 900145,
+    "nama": "ARIEF ADITYA",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T08:07:21.741Z"
+  },
+  {
+    "id": "1794556608416-znp34j",
+    "bib": 30402,
+    "nama": "BASUKI UKI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:56:48.416Z"
+  },
+  {
+    "id": "1794556501056-vhfkfj",
+    "bib": 10222,
+    "nama": "Marlia N Safitri",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:55:01.056Z"
+  },
+  {
+    "id": "1794556395293-ldd8cv",
+    "bib": 900148,
+    "nama": "Yoga Singgih Wijnarko",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T07:53:15.293Z"
+  },
+  {
+    "id": "1794556385447-loodv9",
+    "bib": 20444,
+    "nama": "Iqmal Sazali",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T07:53:05.447Z"
+  },
+  {
+    "id": "1794556311135-cpj27h",
+    "bib": 20449,
+    "nama": "Arif Kusmanto",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:51:51.135Z"
+  },
+  {
+    "id": "1794556290915-r8vt8y",
+    "bib": 30413,
+    "nama": "Alhazmi Yusi W",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:51:30.915Z"
+  },
+  {
+    "id": "1794556168406-sf3uzn",
+    "bib": 20463,
+    "nama": "rochmad basuki",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T07:49:28.406Z"
+  },
+  {
+    "id": "1794555953308-jafoxm",
+    "bib": 30415,
+    "nama": "Cahyani Wulandari",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T07:45:53.308Z"
+  },
+  {
+    "id": "1794555868936-ub2bw8",
+    "bib": 30446,
+    "nama": "Nur Indah Ritonga",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:44:28.936Z"
+  },
+  {
+    "id": "1794555795948-xctoe3",
+    "bib": 20486,
+    "nama": "SAHRILMAS ADITYA",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:43:15.948Z"
+  },
+  {
+    "id": "1794555707341-96v7kb",
+    "bib": 20488,
+    "nama": "DYAHNOTARIS49",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T07:41:47.341Z"
+  },
+  {
+    "id": "1794555518206-0z1x9p",
+    "bib": 30451,
+    "nama": "Merzyta Septiyani",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:38:38.206Z"
+  },
+  {
+    "id": "1794555108688-0qd4l4",
+    "bib": 30464,
+    "nama": "Meryem Noventina",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:31:48.688Z"
+  },
+  {
+    "id": "1794554678113-zymdva",
+    "bib": 20734,
+    "nama": "Wahyu Setyawan",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T07:24:38.113Z"
+  },
+  {
+    "id": "1794554360835-lznk96",
+    "bib": 30475,
+    "nama": "santy ayu p perdhana",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:19:20.835Z"
+  },
+  {
+    "id": "1794554277749-wk4tq7",
+    "bib": 10256,
+    "nama": "Mohammad Ikhwan",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:17:57.749Z"
+  },
+  {
+    "id": "1794554151521-lwodya",
+    "bib": 20517,
+    "nama": "Virgia Putri Maharani",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:15:51.521Z"
+  },
+  {
+    "id": "1794553991241-2qp8vp",
+    "bib": 900163,
+    "nama": "Imaniar Andina",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:13:11.241Z"
+  },
+  {
+    "id": "1794553861378-1vlqb4",
+    "bib": 20549,
+    "nama": "Winda Dewi Puspasari",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T07:11:01.378Z"
+  },
+  {
+    "id": "1794553706388-7luxlr",
+    "bib": 30535,
+    "nama": "Achmad Sariful Annas",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:08:26.388Z"
+  },
+  {
+    "id": "1794553668996-k5bjtr",
+    "bib": 900166,
+    "nama": "Danny",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:07:48.996Z"
+  },
+  {
+    "id": "1794553601764-x8umhh",
+    "bib": 30543,
+    "nama": "SUCIATI KRISTIYANINGSIH",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:06:41.764Z"
+  },
+  {
+    "id": "1794553353253-whndvy",
+    "bib": 20603,
+    "nama": "fatoni asehar",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:02:33.253Z"
+  },
+  {
+    "id": "1794553339378-gq3hb7",
+    "bib": 900169,
+    "nama": "pUTRI ANUARTI",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T07:02:19.378Z"
+  },
+  {
+    "id": "1794552876637-po10oz",
+    "bib": 900170,
+    "nama": "Saras",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:54:36.637Z"
+  },
+  {
+    "id": "1794552681460-yscva6",
+    "bib": 900171,
+    "nama": "Annisa Sari M",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:51:21.460Z"
+  },
+  {
+    "id": "1794552219610-ifg0jr",
+    "bib": 30580,
+    "nama": "Fajar Sutomo",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:43:39.610Z"
+  },
+  {
+    "id": "1794552145935-08qevg",
+    "bib": 10311,
+    "nama": "Siti Adibatul Zaeniah",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:42:25.935Z"
+  },
+  {
+    "id": "1794551907013-ohlx3s",
+    "bib": 30597,
+    "nama": "Dewi mitasari",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:38:27.013Z"
+  },
+  {
+    "id": "1794551743346-sxuk52",
+    "bib": 10335,
+    "nama": "Jessica Livina",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:35:43.346Z"
+  },
+  {
+    "id": "1794551718561-pvddai",
+    "bib": 30604,
+    "nama": "Rani sekarsari",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:35:18.561Z"
+  },
+  {
+    "id": "1794551669304-pyks4y",
+    "bib": 30606,
+    "nama": "Caecilia Wahyu Wijayaningrum",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:34:29.304Z"
+  },
+  {
+    "id": "1794551479924-6gghs5",
+    "bib": 10342,
+    "nama": "Ihsan Nugraha Putra Mukhti",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:31:19.924Z"
+  },
+  {
+    "id": "1794551230111-xvv9dg",
+    "bib": 10344,
+    "nama": "Ana Fitriyani",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:27:10.111Z"
+  },
+  {
+    "id": "1794551106315-gn4j2t",
+    "bib": 900180,
+    "nama": "Andika Djaya",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:25:06.315Z"
+  },
+  {
+    "id": "1794551091941-fhdm1y",
+    "bib": 10401,
+    "nama": "Anjis Pribadi",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:24:51.941Z"
+  },
+  {
+    "id": "1794550699095-j9vev9",
+    "bib": 10412,
+    "nama": "Hermawan Deny Prasetyo",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:18:19.095Z"
+  },
+  {
+    "id": "1794550490076-ctehid",
+    "bib": 10435,
+    "nama": "alexander yulius",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:14:50.076Z"
+  },
+  {
+    "id": "1794550365207-alyi20",
+    "bib": 900184,
+    "nama": "Evi Nurendyah",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:12:45.207Z"
+  },
+  {
+    "id": "1794550323321-9adh8u",
+    "bib": 900185,
+    "nama": "Noppp",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:12:03.321Z"
+  },
+  {
+    "id": "1794550155366-ql6ahp",
+    "bib": 900186,
+    "nama": "Romaydi",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:09:15.366Z"
+  },
+  {
+    "id": "1794550062187-xvhesm",
+    "bib": 10464,
+    "nama": "MOHAMMAD HASAN",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T06:07:42.187Z"
+  },
+  {
+    "id": "1794550015343-enu4ox",
+    "bib": 10465,
+    "nama": "Kurnia Bagus Jatmiko",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:06:55.343Z"
+  },
+  {
+    "id": "1794549671227-2jh7qa",
+    "bib": 30685,
+    "nama": "Indah",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T06:01:11.227Z"
+  },
+  {
+    "id": "1794549295724-7m76i7",
+    "bib": 30686,
+    "nama": "Rinta Murdiani",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T05:54:55.724Z"
+  },
+  {
+    "id": "1794549125514-nntb7n",
+    "bib": 20813,
+    "nama": "Sri Maizawati",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:52:05.514Z"
+  },
+  {
+    "id": "1794548496864-vwisr5",
+    "bib": 20841,
+    "nama": "wailan sk polak",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T05:41:36.864Z"
+  },
+  {
+    "id": "1794548377659-jte0kk",
+    "bib": 20851,
+    "nama": "mega putri andrini",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:39:37.659Z"
+  },
+  {
+    "id": "1794548057875-xlb4ov",
+    "bib": 20868,
+    "nama": "faishal farras",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:34:17.875Z"
+  },
+  {
+    "id": "1794547932322-z8szgw",
+    "bib": 20883,
+    "nama": "Th Puspoarum Kusumoputri",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:32:12.322Z"
+  },
+  {
+    "id": "1794547647267-5i6p0d",
+    "bib": 30755,
+    "nama": "Fransiskus Xaverius Edi Winarno",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:27:27.267Z"
+  },
+  {
+    "id": "1794547620815-r4zuk4",
+    "bib": 20891,
+    "nama": "Satria Syahrie Ramadhana",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:27:00.815Z"
+  },
+  {
+    "id": "1794547439668-xactnw",
+    "bib": 900198,
+    "nama": "Sudrajad",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:23:59.668Z"
+  },
+  {
+    "id": "1794547432555-5y4mpf",
+    "bib": 900199,
+    "nama": "Syaif",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:23:52.555Z"
+  },
+  {
+    "id": "1794547114884-99f01a",
+    "bib": 20897,
+    "nama": "Ilham Hugo Anantama",
+    "kategori": "SAVEDUIT",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T05:18:34.884Z"
+  },
+  {
+    "id": "1794546928610-jy8sci",
+    "bib": 30793,
+    "nama": "Annisa Amalia",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:15:28.610Z"
+  },
+  {
+    "id": "1794546833474-82cjts",
+    "bib": 30806,
+    "nama": "Anneke Kristina",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:13:53.474Z"
+  },
+  {
+    "id": "1794546744409-jctmi7",
+    "bib": 20926,
+    "nama": "Nico rahardjo",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:12:24.409Z"
+  },
+  {
+    "id": "1794546692195-88luj4",
+    "bib": 30823,
+    "nama": "hervin nadia sari",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:11:32.195Z"
+  },
+  {
+    "id": "1794546582140-npol2a",
+    "bib": 30824,
+    "nama": "Panji Asmara Bramantyo",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:09:42.140Z"
+  },
+  {
+    "id": "1794546374290-ugy3sm",
+    "bib": 30831,
+    "nama": "M. Iwan Setiawan",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:06:14.290Z"
+  },
+  {
+    "id": "1794546127311-yinnmm",
+    "bib": 20962,
+    "nama": "Feliana Halim",
+    "kategori": "SAVEDUIT",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T05:02:07.311Z"
+  },
+  {
+    "id": "1794545591589-g11y5e",
+    "bib": 31671,
+    "nama": "noname 1",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T04:53:11.589Z"
+  },
+  {
+    "id": "1794545408590-c53ojm",
+    "bib": 31673,
+    "nama": "noname 2",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:50:08.590Z"
+  },
+  {
+    "id": "1794544865916-vxn6ov",
+    "bib": 22860,
+    "nama": "noname 3",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T04:41:05.916Z"
+  },
+  {
+    "id": "1794544729860-tij3sq",
+    "bib": 22896,
+    "nama": "noname 4",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:38:49.860Z"
+  },
+  {
+    "id": "1794544434964-k04m8f",
+    "bib": 13571,
+    "nama": "noname 5",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:33:54.964Z"
+  },
+  {
+    "id": "1794544427957-9172tv",
+    "bib": 31748,
+    "nama": "noname 6",
     "kategori": "XTRARUN",
     "reward": "Hadiah 4",
     "isWin": true,
-    "timestamp": "2026-11-06T06:42:13.061Z"
+    "timestamp": "2026-11-13T04:33:47.957Z"
+  },
+  {
+    "id": "1794544178363-4s2rho",
+    "bib": 22928,
+    "nama": "noname 7",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T04:29:38.363Z"
+  },
+  {
+    "id": "1794544129063-3zb0qb",
+    "bib": 22930,
+    "nama": "noname 8",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:28:49.063Z"
+  },
+  {
+    "id": "1794543964046-7ujwco",
+    "bib": 31755,
+    "nama": "noname 9",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:26:04.046Z"
+  },
+  {
+    "id": "1794543822531-9wjq3o",
+    "bib": 22933,
+    "nama": "noname 10",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:23:42.531Z"
+  },
+  {
+    "id": "1794543318134-t1ukm6",
+    "bib": 13574,
+    "nama": "noname 11",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:15:18.134Z"
+  },
+  {
+    "id": "1794543295176-zazd79",
+    "bib": 22935,
+    "nama": "noname 12",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:14:55.176Z"
+  },
+  {
+    "id": "1794543258511-1n8gt2",
+    "bib": 22936,
+    "nama": "noname 13",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:14:18.511Z"
+  },
+  {
+    "id": "1794542983410-eao5xi",
+    "bib": 22938,
+    "nama": "noname 14",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T04:09:43.410Z"
+  },
+  {
+    "id": "1794542901115-lf81uc",
+    "bib": 22941,
+    "nama": "noname 15",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 3",
+    "isWin": true,
+    "timestamp": "2026-11-13T04:08:21.115Z"
+  },
+  {
+    "id": "1794542240880-x7iz2g",
+    "bib": 31773,
+    "nama": "virky agusta",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:57:20.880Z"
+  },
+  {
+    "id": "1794542105226-yuxzli",
+    "bib": 31774,
+    "nama": "kedah sedewa",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:55:05.226Z"
+  },
+  {
+    "id": "1794542067479-skrcen",
+    "bib": 31775,
+    "nama": "NADYA RISMA PRATIWI",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:54:27.479Z"
+  },
+  {
+    "id": "1794541813071-gn2wwf",
+    "bib": 31778,
+    "nama": "Mohamad Abiyyu Putra",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:50:13.071Z"
+  },
+  {
+    "id": "1794541726223-uqzu71",
+    "bib": 31844,
+    "nama": "NUGROHO ARIS KUSUMA",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:48:46.223Z"
+  },
+  {
+    "id": "1794541557306-9cyd63",
+    "bib": 31956,
+    "nama": "noname 16",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:45:57.306Z"
+  },
+  {
+    "id": "1794541553546-97uy9k",
+    "bib": 32010,
+    "nama": "noname 17",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:45:53.546Z"
+  },
+  {
+    "id": "1794541379326-qum5ns",
+    "bib": 23355,
+    "nama": "noname 18",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:42:59.326Z"
+  },
+  {
+    "id": "1794541359115-hh0u9f",
+    "bib": 32109,
+    "nama": "noname 19",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:42:39.115Z"
+  },
+  {
+    "id": "1794540948173-xwwkps",
+    "bib": 32122,
+    "nama": "noname 20",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:35:48.173Z"
+  },
+  {
+    "id": "1794540926632-mhx4ac",
+    "bib": 14457,
+    "nama": "noname 21",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 2",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:35:26.632Z"
+  },
+  {
+    "id": "1794540808633-l1pj57",
+    "bib": 32177,
+    "nama": "noname 22",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:33:28.633Z"
+  },
+  {
+    "id": "1794540784229-o2fbxj",
+    "bib": 32365,
+    "nama": "noname 23",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:33:04.229Z"
+  },
+  {
+    "id": "1794540525143-5tlvth",
+    "bib": 32366,
+    "nama": "noname 24",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:28:45.143Z"
+  },
+  {
+    "id": "1794540465685-g7u9is",
+    "bib": 32410,
+    "nama": "noname 25",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:27:45.685Z"
+  },
+  {
+    "id": "1794540142527-dpzvly",
+    "bib": 32643,
+    "nama": "noname 26",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:22:22.527Z"
+  },
+  {
+    "id": "1794540068551-vfr18v",
+    "bib": 32644,
+    "nama": "noname 27",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:21:08.551Z"
+  },
+  {
+    "id": "1794539556231-jxak1c",
+    "bib": 32952,
+    "nama": "noname 28",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 4",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:12:36.231Z"
+  },
+  {
+    "id": "1794539326224-5vxixh",
+    "bib": 33017,
+    "nama": "noname 29",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 5",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:08:46.224Z"
+  },
+  {
+    "id": "1794539245668-r9q8ke",
+    "bib": 33042,
+    "nama": "noname 30",
+    "kategori": "XTRARUN",
+    "reward": "ZONK",
+    "isWin": false,
+    "timestamp": "2026-11-13T03:07:25.668Z"
+  },
+  {
+    "id": "1794539219364-fz1jic",
+    "bib": 33039,
+    "nama": "noname 31",
+    "kategori": "XTRARUN",
+    "reward": "Hadiah 1",
+    "isWin": true,
+    "timestamp": "2026-11-13T03:06:59.364Z"
   }
 ]
