@@ -24,13 +24,49 @@ const ADMIN_PASSWORD =
 const TOKEN_SECRET =
   process.env.ADMIN_TOKEN_SECRET || 'bank-jateng-spin-secret-2026'
 
-const KV_URL = (process.env.KV_REST_API_URL || '').replace(/\/+$/, '')
-const KV_TOKEN = process.env.KV_REST_API_TOKEN || ''
+const KV_URL = (
+  process.env.KV_REST_API_URL ||
+  process.env.UPSTASH_REDIS_REST_URL ||
+  ''
+).replace(/\/+$/, '')
+const KV_TOKEN =
+  process.env.KV_REST_API_TOKEN ||
+  process.env.UPSTASH_REDIS_REST_TOKEN ||
+  ''
 const KV_KEY = 'bank_jateng_spin_history_v1'
 const KV_PESERTA_KEY = 'bank_jateng_peserta_v1'
 
 let memoryHistory = null
 let memoryPeserta = null
+
+function parseKvResultArray(rawResult) {
+  if (Array.isArray(rawResult)) return rawResult
+  if (typeof rawResult !== 'string') return null
+  try {
+    let parsed = JSON.parse(rawResult)
+    if (typeof parsed === 'string') {
+      parsed = JSON.parse(parsed)
+    }
+    return Array.isArray(parsed) ? parsed : null
+  } catch {
+    return null
+  }
+}
+
+function readSeedHistoryFromFile() {
+  try {
+    if (fs.existsSync(LOCAL_HISTORY_FILE)) {
+      const raw = fs.readFileSync(LOCAL_HISTORY_FILE, 'utf-8')
+      const parsed = JSON.parse(raw)
+      if (Array.isArray(parsed)) {
+        return parsed
+      }
+    }
+  } catch {
+    // ignore seed read errors
+  }
+  return []
+}
 
 function getActiveStorageFile() {
   if (IS_VERCEL) {
@@ -73,14 +109,17 @@ async function readHistory() {
       })
       if (res.ok) {
         const json = await res.json()
-        if (json && typeof json.result === 'string') {
-          const parsed = JSON.parse(json.result)
-          if (Array.isArray(parsed)) {
+        if (json && json.result !== null && json.result !== undefined) {
+          const parsed = parseKvResultArray(json.result)
+          if (parsed) {
             memoryHistory = parsed
             return parsed
           }
         } else if (json && json.result === null) {
-          return []
+          // Pertama kali Redis aktif (key belum ada): isi otomatis dari data/spin-history.json
+          const seed = readSeedHistoryFromFile()
+          await writeHistory(seed)
+          return seed
         }
       }
     } catch {
@@ -118,7 +157,7 @@ async function writeHistory(items) {
           Authorization: `Bearer ${KV_TOKEN}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(JSON.stringify(items)),
+        body: JSON.stringify(items),
       })
     } catch {
       // lanjut simpan ke file lokal / tmp
@@ -147,9 +186,9 @@ async function readPeserta() {
       })
       if (res.ok) {
         const json = await res.json()
-        if (json && typeof json.result === 'string') {
-          const parsed = JSON.parse(json.result)
-          if (Array.isArray(parsed)) {
+        if (json && json.result !== null && json.result !== undefined) {
+          const parsed = parseKvResultArray(json.result)
+          if (parsed) {
             memoryPeserta = parsed
             return parsed
           }
@@ -196,7 +235,7 @@ async function writePeserta(items) {
           Authorization: `Bearer ${KV_TOKEN}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(JSON.stringify(items)),
+        body: JSON.stringify(items),
       })
     } catch {
       // lanjut simpan ke file lokal / tmp
