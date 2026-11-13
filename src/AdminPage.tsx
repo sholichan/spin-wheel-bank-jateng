@@ -72,6 +72,11 @@ export default function AdminPage() {
   const [clearPinInput, setClearPinInput] = useState<string>('')
   const [clearPinError, setClearPinError] = useState<string | null>(null)
   const [isClearingHistory, setIsClearingHistory] = useState<boolean>(false)
+  const [deleteTargetItem, setDeleteTargetItem] =
+    useState<SpinHistoryItem | null>(null)
+  const [deletePinInput, setDeletePinInput] = useState<string>('')
+  const [deletePinError, setDeletePinError] = useState<string | null>(null)
+  const [isDeletingItem, setIsDeletingItem] = useState<boolean>(false)
   const [pesertaModalMode, setPesertaModalMode] =
     useState<PesertaModalMode>(null)
   const [pinInput, setPinInput] = useState<string>('')
@@ -227,9 +232,49 @@ export default function AdminPage() {
     })
   }, [history, searchQuery, kategoriFilter, rewardFilter])
 
-  const handleDeleteItem = async (id: string) => {
-    const updated = await deleteSpinHistoryRecord(id)
-    setHistory(updated)
+  const openDeleteItemModal = (item: SpinHistoryItem) => {
+    setDeleteTargetItem(item)
+    setDeletePinInput('')
+    setDeletePinError(null)
+  }
+
+  const closeDeleteItemModal = () => {
+    if (isDeletingItem) return
+    setDeleteTargetItem(null)
+    setDeletePinInput('')
+    setDeletePinError(null)
+  }
+
+  const handleConfirmDeleteItem = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!deleteTargetItem) return
+
+    const cleanPin = deletePinInput.trim()
+
+    if (!cleanPin) {
+      setDeletePinError('Harap masukkan PIN proteksi terlebih dahulu!')
+      return
+    }
+
+    if (cleanPin !== PESERTA_PIN) {
+      setDeletePinError('PIN salah! Masukkan PIN yang benar.')
+      return
+    }
+
+    setIsDeletingItem(true)
+    setDeletePinError(null)
+    try {
+      const target = deleteTargetItem
+      const updated = await deleteSpinHistoryRecord(target.id)
+      setHistory(updated)
+      setDeleteTargetItem(null)
+      setDeletePinInput('')
+      setPesertaNotice(
+        `Data riwayat spin BIB ${target.bib} (${target.nama}) berhasil dihapus.`,
+      )
+    } finally {
+      setIsDeletingItem(false)
+    }
   }
 
   const openConfirmClearModal = () => {
@@ -753,7 +798,7 @@ export default function AdminPage() {
                         <button
                           type="button"
                           className="admin-btn-delete-row"
-                          onClick={() => void handleDeleteItem(item.id)}
+                          onClick={() => openDeleteItemModal(item)}
                           title="Hapus baris riwayat ini"
                         >
                           Hapus
@@ -767,6 +812,79 @@ export default function AdminPage() {
           </div>
         </section>
       </main>
+
+      {/* Confirmation Modal for Delete Single History Row */}
+      {deleteTargetItem && (
+        <div
+          className="admin-modal-backdrop"
+          role="dialog"
+          aria-modal="true"
+          onClick={closeDeleteItemModal}
+        >
+          <div
+            className="admin-modal-card admin-modal-card-pin"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="admin-modal-title admin-font-display">
+              HAPUS RIWAYAT INI?
+            </h2>
+            <p className="admin-modal-desc">
+              Data riwayat spin peserta <strong>{deleteTargetItem.nama}</strong>{' '}
+              (BIB <strong>{deleteTargetItem.bib}</strong>) akan dihapus
+              permanen. Masukkan PIN proteksi untuk melanjutkan.
+            </p>
+
+            {deletePinError && (
+              <div className="admin-login-alert" role="alert">
+                {deletePinError}
+              </div>
+            )}
+
+            <form
+              className="admin-pin-form"
+              onSubmit={(e) => void handleConfirmDeleteItem(e)}
+            >
+              <div className="admin-form-group">
+                <label htmlFor="admin-delete-pin" className="admin-form-label">
+                  PIN Proteksi
+                </label>
+                <input
+                  id="admin-delete-pin"
+                  type="password"
+                  inputMode="numeric"
+                  className="admin-form-input admin-pin-input"
+                  placeholder="Masukkan PIN proteksi"
+                  autoComplete="off"
+                  autoFocus
+                  value={deletePinInput}
+                  onChange={(e) => {
+                    setDeletePinInput(e.target.value)
+                    if (deletePinError) setDeletePinError(null)
+                  }}
+                />
+              </div>
+
+              <div className="admin-modal-actions">
+                <button
+                  type="button"
+                  className="admin-btn admin-btn-secondary"
+                  onClick={closeDeleteItemModal}
+                  disabled={isDeletingItem}
+                >
+                  Batal
+                </button>
+                <button
+                  type="submit"
+                  className="admin-btn admin-btn-danger"
+                  disabled={isDeletingItem}
+                >
+                  {isDeletingItem ? 'Menghapus...' : 'Ya, Hapus'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* Confirmation Modal for Reset History */}
       {confirmClearModal && (
