@@ -17,19 +17,157 @@ export interface SpinHistoryItem {
   timestamp: string
 }
 
-export const PESERTA_LIST: Peserta[] = pesertaData
-
+export const PESERTA_PIN = '789789'
+export const PESERTA_STORAGE_KEY = 'bank_jateng_peserta_v1'
 export const HISTORY_STORAGE_KEY = 'bank_jateng_spin_history_v1'
 export const ADMIN_TOKEN_STORAGE_KEY = 'bank_jateng_admin_token_v1'
 
 const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/+$/, '')
+
+function getInitialPesertaList(): Peserta[] {
+  if (typeof window !== 'undefined') {
+    try {
+      const raw = window.localStorage.getItem(PESERTA_STORAGE_KEY)
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed
+        }
+      }
+    } catch {
+      // fallback to static pesertaData
+    }
+  }
+  return [...pesertaData]
+}
+
+export const PESERTA_LIST: Peserta[] = getInitialPesertaList()
+
+export function loadPesertaList(): Peserta[] {
+  if (typeof window !== 'undefined') {
+    try {
+      const raw = window.localStorage.getItem(PESERTA_STORAGE_KEY)
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          PESERTA_LIST.splice(0, PESERTA_LIST.length, ...parsed)
+          return PESERTA_LIST
+        }
+      }
+    } catch {
+      // ignore parse errors
+    }
+  }
+  return PESERTA_LIST
+}
+
+export function savePesertaList(items: Peserta[]): void {
+  PESERTA_LIST.splice(0, PESERTA_LIST.length, ...items)
+  if (typeof window === 'undefined') return
+  try {
+    window.localStorage.setItem(PESERTA_STORAGE_KEY, JSON.stringify(items))
+  } catch {
+    // ignore storage quota errors
+  }
+}
+
+export async function fetchPesertaList(): Promise<Peserta[]> {
+  try {
+    const res = await fetch(`${API_BASE}/api/peserta`, {
+      cache: 'no-store',
+    })
+    if (res.ok) {
+      const json = await res.json()
+      if (Array.isArray(json.data) && json.data.length > 0) {
+        savePesertaList(json.data)
+        return json.data
+      }
+    }
+  } catch {
+    // fallback to localStorage / static bundle
+  }
+  return loadPesertaList()
+}
+
+export async function importPesertaList(
+  rawItems: unknown,
+  pin: string,
+): Promise<{
+  ok: boolean
+  count?: number
+  data?: Peserta[]
+  message?: string
+}> {
+  if (pin.trim() !== PESERTA_PIN) {
+    return {
+      ok: false,
+      message: 'PIN proteksi salah! Masukkan PIN yang benar.',
+    }
+  }
+
+  if (!Array.isArray(rawItems)) {
+    return {
+      ok: false,
+      message: 'Format file JSON tidak valid (harus berupa array data peserta).',
+    }
+  }
+
+  const normalized: Peserta[] = rawItems
+    .filter((item): item is Record<string, unknown> =>
+      Boolean(item && typeof item === 'object'),
+    )
+    .map((item, idx) => ({
+      no: Number(item.no) || idx + 1,
+      bib: String(item.bib ?? '').trim(),
+      nama: String(item.nama ?? '').trim(),
+      kategori: String(item.kategori ?? '').trim(),
+    }))
+    .filter((item) => item.bib.length > 0 && item.nama.length > 0)
+
+  if (normalized.length === 0) {
+    return {
+      ok: false,
+      message:
+        'Data peserta kosong atau tidak memiliki properti "bib" & "nama" yang valid.',
+    }
+  }
+
+  const token = getAdminToken()
+  try {
+    const res = await fetch(`${API_BASE}/api/peserta`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      body: JSON.stringify({ pin: pin.trim(), data: normalized }),
+    })
+    const json = await res.json()
+    if (!res.ok || !json.ok) {
+      return {
+        ok: false,
+        message: json.message || 'Gagal menyimpan data peserta ke server.',
+      }
+    }
+    if (Array.isArray(json.data)) {
+      savePesertaList(json.data)
+      return { ok: true, count: json.data.length, data: json.data }
+    }
+  } catch {
+    // fallback to localStorage when running without backend API
+  }
+
+  savePesertaList(normalized)
+  return { ok: true, count: normalized.length, data: normalized }
+}
 
 export function findPesertaByBib(bibInput: number | string): Peserta | undefined {
   const cleaned = String(bibInput ?? '').replace(/\D/g, '')
   if (!cleaned) return undefined
   const numericBib = Number(cleaned)
   if (!numericBib || Number.isNaN(numericBib)) return undefined
-  return PESERTA_LIST.find((p) => Number(p.bib) === numericBib)
+  const list = loadPesertaList()
+  return list.find((p) => Number(p.bib) === numericBib)
 }
 
 export function loadSpinHistory(): SpinHistoryItem[] {

@@ -9,6 +9,7 @@ import {
 import SpinWheelLayout from './layouts/SpinWheelLayout'
 import {
   addSpinHistoryRecord,
+  fetchPesertaList,
   fetchSpinHistory,
   findPesertaByBib,
   loadSpinHistory,
@@ -120,6 +121,7 @@ export default function SpinWheelPage() {
   useEffect(() => {
     document.title = 'Bank Jateng - Lucky Spin XtraRun & SaveDuit'
     void fetchSpinHistory()
+    void fetchPesertaList()
 
     let active = true
     void preloadAllAssets().then((cached) => {
@@ -185,7 +187,7 @@ export default function SpinWheelPage() {
         <>
           Nomor BIB{' '}
           <strong>
-            "{currentBib}" ({peserta.nama})
+            "{currentBib}"
           </strong>{' '}
           sudah pernah bermain dan tidak bisa bermain lagi!
         </>,
@@ -381,18 +383,16 @@ export default function SpinWheelPage() {
         <div className="layer-bg" data-node-id="14:24" data-name="XTRARUN 1">
           <img
             alt=""
-            className={`img-cover layer-swap-img ${
-              activeTheme === 'saveduit' ? 'is-active' : ''
-            }`}
+            className={`img-cover layer-swap-img ${activeTheme === 'saveduit' ? 'is-active' : ''
+              }`}
             src={assets.saveduitBg}
             loading="eager"
             decoding="sync"
           />
           <img
             alt=""
-            className={`img-cover layer-swap-img ${
-              activeTheme === 'xtrarun' ? 'is-active' : ''
-            }`}
+            className={`img-cover layer-swap-img ${activeTheme === 'xtrarun' ? 'is-active' : ''
+              }`}
             src={assets.xtrarunBg}
             loading="eager"
             decoding="sync"
@@ -543,7 +543,7 @@ export default function SpinWheelPage() {
                 id="welcome-modal-desc"
                 className="warning-modal-message font-open-sauce"
               >
-                Hallo <strong>{welcomePeserta.nama}</strong> dengan nomor{' '}
+                Hallo peserta dengan nomor{' '}
                 <strong>{welcomePeserta.bib}</strong>.
               </p>
               <button
@@ -579,18 +579,16 @@ export default function SpinWheelPage() {
               >
                 <img
                   alt=""
-                  className={`img-cover layer-swap-img ${
-                    theme === 'saveduit' ? 'is-active' : ''
-                  }`}
+                  className={`img-cover layer-swap-img ${theme === 'saveduit' ? 'is-active' : ''
+                    }`}
                   src={assets.spinWheelSaveduit}
                   loading="eager"
                   decoding="sync"
                 />
                 <img
                   alt=""
-                  className={`img-cover layer-swap-img ${
-                    theme === 'xtrarun' ? 'is-active' : ''
-                  }`}
+                  className={`img-cover layer-swap-img ${theme === 'xtrarun' ? 'is-active' : ''
+                    }`}
                   src={assets.spinWheelXtrarun}
                   loading="eager"
                   decoding="sync"

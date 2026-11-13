@@ -1,22 +1,36 @@
-import { type FormEvent, useCallback, useEffect, useMemo, useState } from 'react'
+import {
+  type ChangeEvent,
+  type FormEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
 import './AdminPage.css'
 import { getCachedAssets, preloadAllAssets } from './assetCache'
 import AdminLayout from './layouts/AdminLayout'
 import {
   clearSpinHistory,
   deleteSpinHistoryRecord,
+  fetchPesertaList,
   fetchSpinHistory,
   getAdminToken,
   HISTORY_STORAGE_KEY,
+  importPesertaList,
+  loadPesertaList,
   loadSpinHistory,
   loginAdmin,
   logoutAdmin,
+  type Peserta,
+  PESERTA_PIN,
+  PESERTA_STORAGE_KEY,
   type SpinHistoryItem,
   verifyAdminSession,
 } from './spinHistory'
 
 type KategoriFilter = 'ALL' | 'SAVEDUIT' | 'XTRARUN'
 type RewardFilter = 'ALL' | 'WIN' | 'ZONK'
+type PesertaModalMode = 'export' | 'import' | 'export-history' | null
 
 function formatDateTime(iso: string): string {
   try {
@@ -47,11 +61,21 @@ export default function AdminPage() {
   const [history, setHistory] = useState<SpinHistoryItem[]>(() =>
     loadSpinHistory(),
   )
+  const [pesertaList, setPesertaList] = useState<Peserta[]>(() => [
+    ...loadPesertaList(),
+  ])
   const [isLoadingData, setIsLoadingData] = useState<boolean>(false)
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [kategoriFilter, setKategoriFilter] = useState<KategoriFilter>('ALL')
   const [rewardFilter, setRewardFilter] = useState<RewardFilter>('ALL')
   const [confirmClearModal, setConfirmClearModal] = useState<boolean>(false)
+  const [pesertaModalMode, setPesertaModalMode] =
+    useState<PesertaModalMode>(null)
+  const [pinInput, setPinInput] = useState<string>('')
+  const [pinError, setPinError] = useState<string | null>(null)
+  const [importFile, setImportFile] = useState<File | null>(null)
+  const [isProcessingPeserta, setIsProcessingPeserta] = useState<boolean>(false)
+  const [pesertaNotice, setPesertaNotice] = useState<string | null>(null)
   const [logoBankJateng, setLogoBankJateng] = useState<string>(
     () => getCachedAssets().logoBankJateng,
   )
@@ -94,8 +118,12 @@ export default function AdminPage() {
   const handleManualRefresh = useCallback(async () => {
     setIsLoadingData(true)
     try {
-      const items = await fetchSpinHistory()
+      const [items, peserta] = await Promise.all([
+        fetchSpinHistory(),
+        fetchPesertaList(),
+      ])
       setHistory(items)
+      setPesertaList([...peserta])
     } finally {
       setIsLoadingData(false)
     }
@@ -106,6 +134,10 @@ export default function AdminPage() {
     if (!isAuthenticated) return
 
     let active = true
+    void fetchPesertaList().then((peserta) => {
+      if (active) setPesertaList([...peserta])
+    })
+
     const poll = () => {
       void fetchSpinHistory().then((items) => {
         if (active) setHistory(items)
@@ -118,6 +150,9 @@ export default function AdminPage() {
     const handleStorage = (e: StorageEvent) => {
       if (!e.key || e.key === HISTORY_STORAGE_KEY) {
         setHistory(loadSpinHistory())
+      }
+      if (!e.key || e.key === PESERTA_STORAGE_KEY) {
+        setPesertaList([...loadPesertaList()])
       }
     }
     window.addEventListener('storage', handleStorage)
@@ -234,6 +269,147 @@ export default function AdminPage() {
     document.body.removeChild(link)
   }
 
+  const openPesertaModal = (mode: 'export' | 'import' | 'export-history') => {
+    setPesertaModalMode(mode)
+    setPinInput('')
+    setPinError(null)
+    setImportFile(null)
+  }
+
+  const closePesertaModal = () => {
+    if (isProcessingPeserta) return
+    setPesertaModalMode(null)
+    setPinInput('')
+    setPinError(null)
+    setImportFile(null)
+  }
+
+  const handleImportFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null
+    setImportFile(file)
+    setPinError(null)
+  }
+
+  const handlePesertaModalSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const cleanPin = pinInput.trim()
+
+    if (!cleanPin) {
+      setPinError('Harap masukkan PIN proteksi terlebih dahulu!')
+      return
+    }
+
+    if (cleanPin !== PESERTA_PIN) {
+      setPinError('PIN salah! Masukkan PIN yang benar.')
+      return
+    }
+
+    if (pesertaModalMode === 'export') {
+      setIsProcessingPeserta(true)
+      setPinError(null)
+      try {
+        const latestPeserta = await fetchPesertaList()
+        setPesertaList([...latestPeserta])
+        const jsonString = JSON.stringify(latestPeserta, null, 2)
+        const blob = new Blob([jsonString], {
+          type: 'application/json;charset=utf-8',
+        })
+        const url = URL.createObjectURL(blob)
+        const link = document.createElement('a')
+        link.href = url
+        link.download = 'peserta.json'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+        URL.revokeObjectURL(url)
+
+        setPesertaModalMode(null)
+        setPinInput('')
+        setPesertaNotice(
+          `Berhasil export peserta.json (${latestPeserta.length.toLocaleString('id-ID')} peserta).`,
+        )
+      } catch {
+        setPinError('Gagal mengekspor data peserta.json.')
+      } finally {
+        setIsProcessingPeserta(false)
+      }
+      return
+    }
+
+    if (pesertaModalMode === 'export-history') {
+      setIsProcessingPeserta(true)
+      setPinError(null)
+      try {
+        const latestHistory = await fetchSpinHistory()
+        setHistory(latestHistory)
+        const jsonString = JSON.stringify(latestHistory, null, 2)
+        const blob = new Blob([jsonString], {
+          type: 'application/json;charset=utf-8',
+        })
+        const url = URL.createObjectURL(blob)
+        const link = document.createElement('a')
+        link.href = url
+        link.download = 'spin-history.json'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+        URL.revokeObjectURL(url)
+
+        setPesertaModalMode(null)
+        setPinInput('')
+        setPesertaNotice(
+          `Berhasil export spin-history.json (${latestHistory.length.toLocaleString('id-ID')} data riwayat).`,
+        )
+      } catch {
+        setPinError('Gagal mengekspor data spin-history.json.')
+      } finally {
+        setIsProcessingPeserta(false)
+      }
+      return
+    }
+
+    if (pesertaModalMode === 'import') {
+      if (!importFile) {
+        setPinError('Harap pilih file peserta.json terlebih dahulu!')
+        return
+      }
+
+      setIsProcessingPeserta(true)
+      setPinError(null)
+      try {
+        const text = await importFile.text()
+        let parsed: unknown
+        try {
+          parsed = JSON.parse(text)
+        } catch {
+          setPinError('File yang dipilih bukan format JSON yang valid.')
+          setIsProcessingPeserta(false)
+          return
+        }
+
+        const result = await importPesertaList(parsed, cleanPin)
+        if (!result.ok) {
+          setPinError(result.message || 'Gagal mengimpor peserta.json.')
+          setIsProcessingPeserta(false)
+          return
+        }
+
+        const nextList = result.data ?? loadPesertaList()
+        setPesertaList([...nextList])
+        setPesertaModalMode(null)
+        setPinInput('')
+        setImportFile(null)
+        setPesertaNotice(
+          `Berhasil import peserta.json (${(result.count ?? nextList.length).toLocaleString('id-ID')} peserta).`,
+        )
+      } catch {
+        setPinError('Terjadi kesalahan saat membaca atau mengimpor file JSON.')
+      } finally {
+        setIsProcessingPeserta(false)
+      }
+    }
+  }
+
   if (authChecking) {
     return (
       <AdminLayout centered>
@@ -339,6 +515,27 @@ export default function AdminPage() {
             </button>
             <button
               type="button"
+              className="admin-btn admin-btn-peserta-export"
+              onClick={() => openPesertaModal('export')}
+            >
+              Export peserta.json
+            </button>
+            <button
+              type="button"
+              className="admin-btn admin-btn-peserta-import"
+              onClick={() => openPesertaModal('import')}
+            >
+              Import peserta.json
+            </button>
+            <button
+              type="button"
+              className="admin-btn admin-btn-peserta-export"
+              onClick={() => openPesertaModal('export-history')}
+            >
+              Export spin-history.json
+            </button>
+            <button
+              type="button"
               className="admin-btn admin-btn-export"
               onClick={handleExportCsv}
               disabled={filteredHistory.length === 0}
@@ -366,6 +563,19 @@ export default function AdminPage() {
       </header>
 
       <main className="admin-content">
+        {pesertaNotice && (
+          <div className="admin-notice-banner" role="status">
+            <span>{pesertaNotice}</span>
+            <button
+              type="button"
+              className="admin-notice-close"
+              onClick={() => setPesertaNotice(null)}
+              aria-label="Tutup notifikasi"
+            >
+              ✕
+            </button>
+          </div>
+        )}
         {/* Summary Cards */}
         <section className="admin-stats-grid">
           <div className="admin-stat-card">
@@ -556,6 +766,116 @@ export default function AdminPage() {
                 Ya, Hapus Semua
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* PIN Protection Modal for Export & Import peserta.json */}
+      {pesertaModalMode && (
+        <div
+          className="admin-modal-backdrop"
+          role="dialog"
+          aria-modal="true"
+          onClick={closePesertaModal}
+        >
+          <div
+            className="admin-modal-card admin-modal-card-pin"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="admin-modal-title admin-modal-title-primary admin-font-display">
+              {pesertaModalMode === 'export'
+                ? 'EXPORT PESERTA.JSON'
+                : pesertaModalMode === 'export-history'
+                  ? 'EXPORT SPIN-HISTORY.JSON'
+                  : 'IMPORT PESERTA.JSON'}
+            </h2>
+            <p className="admin-modal-desc">
+              {pesertaModalMode === 'export'
+                ? `Masukkan PIN proteksi untuk mengunduh file peserta.json (${pesertaList.length.toLocaleString('id-ID')} peserta terdaftar).`
+                : pesertaModalMode === 'export-history'
+                  ? `Masukkan PIN proteksi untuk mengunduh file spin-history.json (${history.length.toLocaleString('id-ID')} data riwayat).`
+                  : 'Pilih file peserta.json dan masukkan PIN proteksi untuk memperbarui data peserta.'}
+            </p>
+
+            {pinError && (
+              <div className="admin-login-alert" role="alert">
+                {pinError}
+              </div>
+            )}
+
+            <form
+              className="admin-pin-form"
+              onSubmit={(e) => void handlePesertaModalSubmit(e)}
+            >
+              {pesertaModalMode === 'import' && (
+                <div className="admin-form-group">
+                  <label
+                    htmlFor="admin-import-peserta-file"
+                    className="admin-form-label"
+                  >
+                    File JSON Peserta
+                  </label>
+                  <input
+                    id="admin-import-peserta-file"
+                    type="file"
+                    accept=".json,application/json"
+                    className="admin-form-file-input"
+                    onChange={handleImportFileChange}
+                  />
+                  {importFile && (
+                    <span className="admin-file-selected">
+                      File terpilih: <strong>{importFile.name}</strong>
+                    </span>
+                  )}
+                </div>
+              )}
+
+              <div className="admin-form-group">
+                <label htmlFor="admin-peserta-pin" className="admin-form-label">
+                  PIN Proteksi
+                </label>
+                <input
+                  id="admin-peserta-pin"
+                  type="password"
+                  inputMode="numeric"
+                  className="admin-form-input admin-pin-input"
+                  placeholder="Masukkan PIN proteksi"
+                  autoComplete="off"
+                  autoFocus
+                  value={pinInput}
+                  onChange={(e) => {
+                    setPinInput(e.target.value)
+                    if (pinError) setPinError(null)
+                  }}
+                />
+              </div>
+
+              <div className="admin-modal-actions">
+                <button
+                  type="button"
+                  className="admin-btn admin-btn-secondary"
+                  onClick={closePesertaModal}
+                  disabled={isProcessingPeserta}
+                >
+                  Batal
+                </button>
+                <button
+                  type="submit"
+                  className={`admin-btn ${
+                    pesertaModalMode === 'import'
+                      ? 'admin-btn-peserta-import'
+                      : 'admin-btn-peserta-export'
+                  }`}
+                  disabled={isProcessingPeserta}
+                >
+                  {isProcessingPeserta
+                    ? 'Memproses...'
+                    : pesertaModalMode === 'import'
+                      ? 'Import JSON'
+                      : 'Export JSON'}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

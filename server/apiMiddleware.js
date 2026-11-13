@@ -11,6 +11,10 @@ const LOCAL_DATA_DIR = path.resolve(__dirname, '../data')
 const LOCAL_HISTORY_FILE = path.join(LOCAL_DATA_DIR, 'spin-history.json')
 const TMP_HISTORY_FILE = path.join(os.tmpdir(), 'bank-jateng-spin-history.json')
 
+const LOCAL_PESERTA_FILE = path.resolve(__dirname, '../src/data/peserta.json')
+const TMP_PESERTA_FILE = path.join(os.tmpdir(), 'bank-jateng-peserta.json')
+const PESERTA_PIN = '789789'
+
 const IS_VERCEL = Boolean(process.env.VERCEL || process.env.VERCEL_ENV)
 
 const ADMIN_USERNAME =
@@ -23,8 +27,10 @@ const TOKEN_SECRET =
 const KV_URL = (process.env.KV_REST_API_URL || '').replace(/\/+$/, '')
 const KV_TOKEN = process.env.KV_REST_API_TOKEN || ''
 const KV_KEY = 'bank_jateng_spin_history_v1'
+const KV_PESERTA_KEY = 'bank_jateng_peserta_v1'
 
 let memoryHistory = null
+let memoryPeserta = null
 
 function getActiveStorageFile() {
   if (IS_VERCEL) {
@@ -133,6 +139,86 @@ async function writeHistory(items) {
   }
 }
 
+async function readPeserta() {
+  if (KV_URL && KV_TOKEN) {
+    try {
+      const res = await fetch(`${KV_URL}/get/${KV_PESERTA_KEY}`, {
+        headers: { Authorization: `Bearer ${KV_TOKEN}` },
+      })
+      if (res.ok) {
+        const json = await res.json()
+        if (json && typeof json.result === 'string') {
+          const parsed = JSON.parse(json.result)
+          if (Array.isArray(parsed)) {
+            memoryPeserta = parsed
+            return parsed
+          }
+        }
+      }
+    } catch {
+      // fallback ke file / memory
+    }
+  }
+
+  const candidateFiles = IS_VERCEL
+    ? [TMP_PESERTA_FILE, LOCAL_PESERTA_FILE]
+    : [LOCAL_PESERTA_FILE, TMP_PESERTA_FILE]
+
+  for (const file of candidateFiles) {
+    try {
+      if (fs.existsSync(file)) {
+        const raw = fs.readFileSync(file, 'utf-8')
+        const parsed = JSON.parse(raw)
+        if (Array.isArray(parsed)) {
+          memoryPeserta = parsed
+          return parsed
+        }
+      }
+    } catch {
+      // lanjut ke kandidat berikutnya
+    }
+  }
+
+  if (Array.isArray(memoryPeserta)) {
+    return memoryPeserta
+  }
+  return []
+}
+
+async function writePeserta(items) {
+  memoryPeserta = items
+
+  if (KV_URL && KV_TOKEN) {
+    try {
+      await fetch(`${KV_URL}/set/${KV_PESERTA_KEY}`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${KV_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(JSON.stringify(items)),
+      })
+    } catch {
+      // lanjut simpan ke file lokal / tmp
+    }
+  }
+
+  const targetFile = IS_VERCEL ? TMP_PESERTA_FILE : LOCAL_PESERTA_FILE
+  try {
+    const dir = path.dirname(targetFile)
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true })
+    }
+    fs.writeFileSync(targetFile, JSON.stringify(items, null, 2), 'utf-8')
+  } catch {
+    try {
+      fs.writeFileSync(TMP_PESERTA_FILE, JSON.stringify(items, null, 2), 'utf-8')
+    } catch {
+      // tetap tersimpan di memoryPeserta
+    }
+  }
+}
+
 function generateAdminToken(username) {
   const payload = `${username}:${TOKEN_SECRET}`
   return crypto.createHash('sha256').update(payload).digest('hex')
@@ -188,7 +274,7 @@ function parseJsonBody(req) {
     let body = ''
     req.on('data', (chunk) => {
       body += chunk
-      if (body.length > 1e6) {
+      if (body.length > 15e6) {
         reject(new Error('Payload too large'))
       }
     })
@@ -359,6 +445,73 @@ export async function handleApiRequest(req, res) {
     }
     await writeHistory([])
     sendJson(res, 200, { ok: true, data: [] })
+    return true
+  }
+
+  // GET /api/peserta
+  if (pathname === '/api/peserta' && req.method === 'GET') {
+    const items = await readPeserta()
+    sendJson(res, 200, { ok: true, data: items })
+    return true
+  }
+
+  // POST /api/peserta (import peserta.json with PIN protection)
+  if (pathname === '/api/peserta' && req.method === 'POST') {
+    if (!isAuthorized(req)) {
+      sendJson(res, 401, { ok: false, message: 'Unauthorized' })
+      return true
+    }
+    try {
+      const body = await parseJsonBody(req)
+      const pin = String(body.pin || '').trim()
+      if (pin !== PESERTA_PIN) {
+        sendJson(res, 403, {
+          ok: false,
+          message: 'PIN proteksi salah!',
+        })
+        return true
+      }
+
+      const rawList = Array.isArray(body.data) ? body.data : null
+      if (!rawList) {
+        sendJson(res, 400, {
+          ok: false,
+          message: 'Format file JSON harus berupa array data peserta.',
+        })
+        return true
+      }
+
+      const normalized = rawList
+        .filter((item) => item && typeof item === 'object')
+        .map((item, idx) => ({
+          no: Number(item.no) || idx + 1,
+          bib: String(item.bib ?? '').trim(),
+          nama: String(item.nama ?? '').trim(),
+          kategori: String(item.kategori ?? '').trim(),
+        }))
+        .filter((item) => item.bib && item.nama)
+
+      if (normalized.length === 0) {
+        sendJson(res, 400, {
+          ok: false,
+          message:
+            'Data peserta kosong atau tidak memiliki properti bib & nama yang valid.',
+        })
+        return true
+      }
+
+      await writePeserta(normalized)
+      sendJson(res, 200, {
+        ok: true,
+        count: normalized.length,
+        data: normalized,
+      })
+    } catch {
+      sendJson(res, 400, {
+        ok: false,
+        message: 'Gagal mengimpor file peserta.json.',
+      })
+    }
     return true
   }
 
